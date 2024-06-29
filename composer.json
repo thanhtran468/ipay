@@ -1,0 +1,33 @@
+{
+    "name": "gingdev/ipay",
+    "description": "IPay API",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "classmap": ["src"]
+    },
+    "authors": [
+        {
+            "name": "ging-dev",
+            "email": "thanh1101dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php-http/httplug": "^2.4",
+        "php-http/client-common": "^2.7",
+        "nette/utils": "^4.0",
+        "league/object-mapper": "dev-main"
+    },
+    "require-dev": {
+        "php-http/curl-client": "^2.3",
+        "nyholm/psr7": "^1.8",
+        "phpstan/phpstan": "^1.11"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    }
+}
