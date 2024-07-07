@@ -4,7 +4,8 @@
     "type": "library",
     "license": "MIT",
     "autoload": {
-        "classmap": ["src"]
+        "classmap": ["src"],
+        "files": ["src/functions.php"]
     },
     "authors": [
         {
@@ -12,13 +13,14 @@
             "email": "thanh1101dev@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
         "php-http/httplug": "^2.4",
         "php-http/client-common": "^2.7",
         "nette/utils": "^4.0",
-        "league/object-mapper": "dev-main"
+        "eventsauce/object-hydrator": "^1.4",
+        "symfony/options-resolver": "^7.1"
     },
     "require-dev": {
         "php-http/curl-client": "^2.3",

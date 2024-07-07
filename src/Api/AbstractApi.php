@@ -2,22 +2,30 @@
 
 namespace IPay\Api;
 
+use EventSauce\ObjectHydrator\DefinitionProvider;
+use EventSauce\ObjectHydrator\KeyFormatterWithoutConversion;
+use EventSauce\ObjectHydrator\ObjectMapper;
+use EventSauce\ObjectHydrator\ObjectMapperUsingReflection;
 use IPay\IPayClient;
-use League\ObjectMapper\KeyFormatterWithoutConversion;
-use League\ObjectMapper\ObjectMapper;
-use League\ObjectMapper\ObjectMapperUsingReflection;
-use League\ObjectMapper\ReflectionDefinitionProvider;
 use Nette\Utils\Json;
+use Symfony\Component\OptionsResolver\OptionsResolver;
 
+/**
+ * @template T of SessionInterface
+ */
 abstract class AbstractApi
 {
-    private ObjectMapper $objectMapper;
+    protected ObjectMapper $objectMapper;
 
+    /**
+     * @param T $session
+     */
     public function __construct(
-        protected IPayClient $client,
+        protected IPayClient $iPayClient,
+        private SessionInterface $session,
     ) {
         $this->objectMapper = new ObjectMapperUsingReflection(
-            new ReflectionDefinitionProvider(
+            new DefinitionProvider(
                 keyFormatter: new KeyFormatterWithoutConversion(),
             ),
         );
@@ -30,24 +38,28 @@ abstract class AbstractApi
      */
     protected function post(string $uri, array $data = []): array
     {
-        $response = $this->client->getClient()->post(
+        $response = $this->iPayClient->getClient()->post(
             $uri,
             [],
-            $this->configureFieldBuilder(
-                FieldBuilder::with($data)
-            )->encrypt()
+            BodyBuilder::from($data)
+                ->enhance($this->getSession()->getRequestParameters())
+                ->build()
+                ->encrypt()
         );
 
         return Json::decode((string) $response->getBody(), true);
     }
 
-    protected function configureFieldBuilder(FieldBuilder $builder): FieldBuilder
+    protected static function createOptionsResolver(): OptionsResolver
     {
-        return $builder->withRequiredFields();
+        return new OptionsResolver();
     }
 
-    public function getObjectMapper(): ObjectMapper
+    /**
+     * @return T
+     */
+    public function getSession(): SessionInterface
     {
-        return $this->objectMapper;
+        return $this->session;
     }
 }

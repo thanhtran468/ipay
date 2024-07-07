@@ -1,0 +1,6 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\#2 \\$length of function str_split expects int\\<1, max\\>, int given\\.$#"
+			count: 1
+			path: src/Encryption/Encrypter.php

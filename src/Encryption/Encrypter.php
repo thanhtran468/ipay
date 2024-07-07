@@ -18,12 +18,10 @@ class Encrypter
         $mlen = strlen($message);
 
         $result = '';
-        foreach (
-            str_split(
-                $message,
-                (int) ceil($mlen / ceil($mlen / 86))
-            ) as $part
-        ) {
+        foreach (str_split(
+            $message,
+            (int) ceil($mlen / ceil($mlen / 86))
+        ) as $part) {
             openssl_public_encrypt(
                 $part,
                 $part,

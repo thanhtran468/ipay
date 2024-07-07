@@ -1,0 +1,349 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="robots" content="noindex">
+	<title>Interface Http\Promise\Promise |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Http.html">Http</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Http.Promise.html">Promise</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.html">IPay</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Api.html">Api</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Encryption.html">Encryption</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Entity.html">Entity</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Exception.html">Exception</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Http.html">Http</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Interfaces</h3>
+			<ul>
+					<li class="active">
+						<a href="Http.Promise.Promise.html">
+							Promise
+						</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Http.Promise.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Http.Promise.Promise.html">Interface</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Interface <a href="namespace-Http.html">Http</a>\<a href="namespace-Http.Promise.html">Promise</a>\<a href="Http.Promise.Promise.html">Promise</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+		<div class="classLikeDescription">
+	<div class="description"><p>Promise represents a value that may not be available yet, but will be resolved at some point in future.
+It acts like a proxy to the actual value.</p>
+<p>This interface is an extension of the promises/a+ specification.</p>
+</div>
+		</div>
+
+
+		<div class="classLikeSection">
+
+		</div>
+
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="then" id="_then">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>then(<span>callable|null <var>$onFulfilled</var> = <span class="php-kw">null</span></span>, <span>callable|null <var>$onRejected</var> = <span class="php-kw">null</span></span>): <b><span class="active" title="Http\Promise\Promise">Promise</span></b></code>
+
+
+	<div class="expandable-collapsedView">
+		Adds behavior for when the promise is resolved or rejected (response will be available, or error happens).
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Adds behavior for when the promise is resolved or rejected (response will be available, or error happens).</p>
+<p>If you do not care about one of the cases, you can set the corresponding callable to null
+The callback will be called when the value arrived and never more than once.</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$onFulfilled</var>&nbsp;&nbsp;</td>
+										<td><p>called when a response will be available</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$onRejected</var>&nbsp;&nbsp;</td>
+										<td><p>called when an exception occurs</p>
+</td>
+									</tr>
+							</table>
+
+							<h4>Returns</h4>
+							<div><p>a new resolved promise with value of the executed callback (onFulfilled / onRejected)</p>
+</div>
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_then">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="getState" id="_getState">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>getState(): string</code>
+
+
+	<div class="expandable-collapsedView">
+		Returns the state of the promise, one of PENDING, FULFILLED or REJECTED.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Returns the state of the promise, one of PENDING, FULFILLED or REJECTED.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_getState">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="wait" id="_wait">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>wait(<span>bool <var>$unwrap</var> = <span class="php-kw">true</span></span>): ($unwrap is true&nbsp;?&nbsp;mixed&nbsp;:&nbsp;null)</code>
+
+
+	<div class="expandable-collapsedView">
+		Wait for the promise to be fulfilled or rejected.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Wait for the promise to be fulfilled or rejected.</p>
+<p>When this method returns, the request has been resolved and if callables have been
+specified, the appropriate one has terminated.</p>
+<p>When $unwrap is true (the default), the response is returned, or the exception thrown
+on failure. Otherwise, nothing is returned or thrown.</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$unwrap</var>&nbsp;&nbsp;</td>
+										<td><p>Whether to return resolved value / throw reason or not</p>
+</td>
+									</tr>
+							</table>
+
+							<h4>Returns</h4>
+							<div><p>Resolved value, null if $unwrap is set to false</p>
+</div>
+
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="Throwable.html"><span>Throwable</span></a></code>&nbsp;</td>
+										<td><p>the rejection reason if $unwrap is set to true and the request failed</p>
+</td>
+									</tr>
+							</table>
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_wait">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		<table class="table" id="constants">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Constants</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="PENDING" id="PENDING">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code>PENDING = <span class="php-str">'pending'</span></code>
+
+	<div class="expandable-collapsedView">
+		Promise has not been fulfilled or rejected.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Promise has not been fulfilled or rejected.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#PENDING">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="FULFILLED" id="FULFILLED">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code>FULFILLED = <span class="php-str">'fulfilled'</span></code>
+
+	<div class="expandable-collapsedView">
+		Promise has been fulfilled.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Promise has been fulfilled.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#FULFILLED">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="REJECTED" id="REJECTED">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+				</code>
+			</td>
+
+			<td class="table-cell">
+<code>REJECTED = <span class="php-str">'rejected'</span></code>
+
+	<div class="expandable-collapsedView">
+		Promise has been rejected.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Promise has been rejected.</p>
+</div>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#REJECTED">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha.6</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

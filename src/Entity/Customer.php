@@ -2,7 +2,7 @@
 
 namespace IPay\Entity;
 
-use League\ObjectMapper\MapFrom;
+use EventSauce\ObjectHydrator\MapFrom;
 
 #[MapFrom([
     'fullname' => 'name',
@@ -10,29 +10,13 @@ use League\ObjectMapper\MapFrom;
     'jobTitle' => 'job',
     'feeAcctNo' => 'accountNumber',
 ])]
-readonly class Info
+readonly class Customer
 {
-    /**
-     * @internal
-     */
     public function __construct(
         public string $name,
         public string $phone,
         public string $job,
         public string $accountNumber
-    ) {
-    }
-}
-
-readonly class Customer
-{
-    /**
-     * @internal
-     */
-    public function __construct(
-        public string $userName,
-        #[MapFrom('customerInfo')]
-        public Info $info,
     ) {
     }
 }

@@ -1,3 +1,6 @@
 vendor
+tools
 test.php
 *.cache
+*.txt
+*.lock
