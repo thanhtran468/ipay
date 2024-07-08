@@ -32,16 +32,16 @@ abstract class AbstractApi
     }
 
     /**
-     * @param string[] $data
+     * @param string[] $parameters
      *
      * @return mixed[]
      */
-    protected function post(string $uri, array $data = []): array
+    protected function post(string $uri, array $parameters = []): array
     {
         $response = $this->iPayClient->getClient()->post(
-            $uri,
+            sprintf('ipay/wa/%s', $uri),
             [],
-            BodyBuilder::from($data)
+            BodyBuilder::from($parameters)
                 ->enhance($this->getSession()->getRequestParameters())
                 ->build()
                 ->encrypt()

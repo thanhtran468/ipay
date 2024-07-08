@@ -16,7 +16,7 @@ class AuthenticatedApi extends AbstractApi
     {
         return $this->objectMapper->hydrateObject(
             Customer::class,
-            $this->post('/getCustomerDetails')['customerInfo'],
+            $this->post('getCustomerDetails')['customerInfo'],
         );
     }
 
@@ -27,7 +27,7 @@ class AuthenticatedApi extends AbstractApi
     {
         return $this->objectMapper->hydrateObjects(
             Account::class,
-            $this->post('/getEntitiesAndAccounts')['accounts'],
+            $this->post('getEntitiesAndAccounts')['accounts'],
         )->toArray();
     }
 
@@ -75,7 +75,7 @@ class AuthenticatedApi extends AbstractApi
         $parameters['pageNumber'] = 0;
         do {
             $transactions = $this->post(
-                '/getHistTransactions',
+                'getHistTransactions',
                 $parameters
             )['transactions'];
             foreach ($this->objectMapper->hydrateObjects(

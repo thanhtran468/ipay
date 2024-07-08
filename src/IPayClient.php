@@ -23,7 +23,7 @@ final class IPayClient
             new HttpMethodsClient(
                 new PluginClient(Psr18ClientDiscovery::find(), [
                     new BaseUriPlugin(Psr17FactoryDiscovery::findUriFactory()
-                        ->createUri('https://api-ipay.vietinbank.vn/ipay/wa')
+                        ->createUri('https://api-ipay.vietinbank.vn')
                     ),
                     new ContentTypePlugin(),
                     new ExceptionThrower(),
