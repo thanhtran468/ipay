@@ -22,19 +22,23 @@ final class CaptchaSolver
     public static function solve(string $svg): string
     {
         /** @var string[] */
-        $svgPathCommands = (new Crawler($svg))
+        $pathCommands = (new Crawler($svg))
             ->filterXPath('//path[@fill!="none"]')
             ->each(function (Crawler $node): string {
                 return (string) $node->attr('d');
             });
 
-        sort($svgPathCommands, SORT_NATURAL);
+        sort($pathCommands, SORT_NATURAL);
 
         $result = '';
-        foreach ($svgPathCommands as $svgPathCommand) {
-            /** @var string */
-            $symbolicPath = preg_replace('/[^A-Z]/', '', $svgPathCommand);
-            $result .= static::LENGTH_TO_NUMBER_MAPPING[strlen($symbolicPath)];
+        foreach ($pathCommands as $pathCommand) {
+            /**
+             * Only keep path commands
+             * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d#path_commands
+             * @var string
+             */
+            $paths = preg_replace('/[^MLHVCSQTAZmlhvcsqtaz]/', '', $pathCommand);
+            $result .= static::LENGTH_TO_NUMBER_MAPPING[strlen($paths)];
         }
 
         return $result;
