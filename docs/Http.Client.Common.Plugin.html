@@ -1,0 +1,228 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="robots" content="noindex">
+	<title>Interface Http\Client\Common\Plugin |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Http.html">Http</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Http.Client.html">Client</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Http.Client.Common.html">Common</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.html">IPay</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Api.html">Api</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Captcha.html">Captcha</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Encryption.html">Encryption</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Entity.html">Entity</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Exception.html">Exception</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Http.html">Http</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Interfaces</h3>
+			<ul>
+					<li>
+						<a href="Http.Client.Common.HttpMethodsClientInterface.html">
+							HttpMethodsClientInterface
+						</a>
+					</li>
+					<li class="active">
+						<a href="Http.Client.Common.Plugin.html">
+							Plugin
+						</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Http.Client.Common.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Http.Client.Common.Plugin.html">Interface</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Interface <a href="namespace-Http.html">Http</a>\<a href="namespace-Http.Client.html">Client</a>\<a href="namespace-Http.Client.Common.html">Common</a>\<a href="Http.Client.Common.Plugin.html">Plugin</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+		<div class="classLikeDescription">
+	<div class="description"><p>A plugin is a middleware to transform the request and/or the response.</p>
+<p>The plugin can:</p>
+<ul>
+<li>break the chain and return a response</li>
+<li>dispatch the request to the next middleware</li>
+<li>restart the request</li>
+</ul>
+</div>
+		</div>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Http\Client\Common\Plugin</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="IPay.Http.Plugin.ExceptionThrower.html"><span>IPay\Http\Plugin\ExceptionThrower</span></a>
+
+		implements
+			<b><span class="active" title="Http\Client\Common\Plugin">Plugin</span></b>
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+
+		</div>
+
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="handleRequest" id="_handleRequest">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>handleRequest(
+	<span><a href="Psr.Http.Message.RequestInterface.html"><span title="Psr\Http\Message\RequestInterface">RequestInterface</span></a> <var>$request</var></span>,
+	<span>callable(<a href="Psr.Http.Message.RequestInterface.html"><span title="Psr\Http\Message\RequestInterface">RequestInterface</span></a>):&nbsp;<a href="Http.Promise.Promise.html"><span title="Http\Promise\Promise">Promise</span></a> <var>$next</var></span>,
+	<span>callable(<a href="Psr.Http.Message.RequestInterface.html"><span title="Psr\Http\Message\RequestInterface">RequestInterface</span></a>):&nbsp;<a href="Http.Promise.Promise.html"><span title="Http\Promise\Promise">Promise</span></a> <var>$first</var></span>,
+): <a href="Http.Promise.Promise.html"><span title="Http\Promise\Promise">Promise</span></a></code>
+
+
+	<div class="expandable-collapsedView">
+		Handle the request and return the response coming from the next callable.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Handle the request and return the response coming from the next callable.</p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$next</var>&nbsp;&nbsp;</td>
+										<td><p>Next middleware in the chain, the request is passed as the first argument</p>
+</td>
+									</tr>
+									<tr>
+										<td><var>$first</var>&nbsp;&nbsp;</td>
+										<td><p>First middleware in the chain, used to to restart a request</p>
+</td>
+									</tr>
+							</table>
+
+							<h4>Returns</h4>
+							<div><p>Resolves a PSR-7 Response or fails with an Http\Client\Exception (The same as HttpAsyncClient)</p>
+</div>
+
+
+		<h4>Implemented by</h4>
+		<ul>
+				<li>
+<a href="IPay.Http.Plugin.ExceptionThrower.html#_handleRequest">						<code>IPay\Http\Plugin\ExceptionThrower::handleRequest()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_handleRequest">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha.6</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

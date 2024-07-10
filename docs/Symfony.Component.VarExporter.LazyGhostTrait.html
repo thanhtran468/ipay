@@ -1,0 +1,474 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="robots" content="noindex">
+	<title>Trait Symfony\Component\VarExporter\LazyGhostTrait |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.html">IPay</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Api.html">Api</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Captcha.html">Captcha</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Encryption.html">Encryption</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Entity.html">Entity</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Exception.html">Exception</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Http.html">Http</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-Symfony.html">Symfony</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Symfony.Component.html">Component</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-Symfony.Component.VarExporter.html">VarExporter</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Traits</h3>
+			<ul>
+					<li class="active">
+						<a href="Symfony.Component.VarExporter.LazyGhostTrait.html">
+							LazyGhostTrait
+						</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-Symfony.Component.VarExporter.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="Symfony.Component.VarExporter.LazyGhostTrait.html">Trait</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Trait <a href="namespace-Symfony.html">Symfony</a>\<a href="namespace-Symfony.Component.html">Component</a>\<a href="namespace-Symfony.Component.VarExporter.html">VarExporter</a>\<a href="Symfony.Component.VarExporter.LazyGhostTrait.html">LazyGhostTrait</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<b><span class="active">Symfony\Component\VarExporter\LazyGhostTrait</span></b>
+
+
+	<ul class="classTree">
+	<li>
+<a href="IPay.Api.AuthenticatedApi.html"><span>IPay\Api\AuthenticatedApi</span></a>
+
+
+		uses
+			<b><span class="active" title="Symfony\Component\VarExporter\LazyGhostTrait">LazyGhostTrait</span></b>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+
+		</div>
+
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="createLazyGhost" id="_createLazyGhost">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>createLazyGhost(
+	<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$initializer</var></span>,
+	<span>array&lt;string, true&gt;|null <var>$skippedProperties</var> = <span class="php-kw">null</span></span>,
+	<span>static|null <var>$instance</var> = <span class="php-kw">null</span></span>,
+): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Creates a lazy-loading ghost instance.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Creates a lazy-loading ghost instance.</p>
+<p>Skipped properties should be indexed by their array-cast identifier, see
+<a href="https://php.net/manual/language.types.array#language.types.array.casting">https://php.net/manual/language.types.array#language.types.array.casting</a></p>
+</div>
+
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$skippedProperties</var>&nbsp;&nbsp;</td>
+										<td><p>An array indexed by the properties to skip, a.k.a. the ones
+that the initializer doesn't initialize, if any</p>
+</td>
+									</tr>
+							</table>
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_createLazyGhost">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="isLazyObjectInitialized" id="_isLazyObjectInitialized">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>isLazyObjectInitialized(<span>bool <var>$partial</var> = <span class="php-kw">false</span></span>): bool</code>
+
+
+	<div class="expandable-collapsedView">
+		Returns whether the object is initialized.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Returns whether the object is initialized.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_isLazyObjectInitialized">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="initializeLazyObject" id="_initializeLazyObject">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>initializeLazyObject(): static</code>
+
+
+	<div class="expandable-collapsedView">
+		Forces initialization of a lazy object and returns it.
+	</div>
+
+	<div class="expandable-expandedView">
+	<div class="description"><p>Forces initialization of a lazy object and returns it.</p>
+</div>
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_initializeLazyObject">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="resetLazyObject" id="_resetLazyObject">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>resetLazyObject(): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+							<h4>Returns</h4>
+							<div><p>Returns false when the object cannot be reset, ie when it's not a lazy object</p>
+</div>
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_resetLazyObject">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__get" id="___get">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					&amp;
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>__get(<span><var>$name</var></span>): mixed</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___get">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__set" id="___set">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>__set(<span><var>$name</var></span>, <span><var>$value</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___set">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__isset" id="___isset">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>__isset(<span><var>$name</var></span>): bool</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___isset">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__unset" id="___unset">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>__unset(<span><var>$name</var></span>): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___unset">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__clone" id="___clone">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>__clone(): void</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___clone">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__serialize" id="___serialize">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>__serialize(): array</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___serialize">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__destruct" id="___destruct">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code>__destruct()</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___destruct">#</a>
+		</td>
+	</tr>
+		</table>
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha.6</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

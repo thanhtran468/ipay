@@ -1,0 +1,395 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>Class IPay\Api\BodyBuilder |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-IPay.html">IPay</a>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-IPay.Api.html">Api</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Captcha.html">Captcha</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Encryption.html">Encryption</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Entity.html">Entity</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Exception.html">Exception</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Http.html">Http</a>
+			</li>
+	</ul>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-none.html">none</a>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li>
+						<a href="IPay.Api.AbstractApi.html">
+							AbstractApi
+						</a>
+					</li>
+					<li>
+						<a href="IPay.Api.AuthenticatedApi.html">
+							AuthenticatedApi
+						</a>
+					</li>
+					<li>
+						<a href="IPay.Api.AuthenticatedSession.html">
+							AuthenticatedSession
+						</a>
+					</li>
+					<li class="active">
+						<a href="IPay.Api.BodyBuilder.html">
+							BodyBuilder
+						</a>
+					</li>
+					<li>
+						<a href="IPay.Api.UnauthenticatedApi.html">
+							UnauthenticatedApi
+						</a>
+					</li>
+					<li>
+						<a href="IPay.Api.UnauthenticatedSession.html">
+							UnauthenticatedSession
+						</a>
+					</li>
+			</ul>
+		</div>
+		<div class="menu-section">
+			<h3>Interfaces</h3>
+			<ul>
+					<li>
+						<a href="IPay.Api.SessionInterface.html">
+							SessionInterface
+						</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-IPay.Api.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="IPay.Api.BodyBuilder.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+		<h1>
+			Class <a href="namespace-IPay.html">IPay</a>\<a href="namespace-IPay.Api.html">Api</a>\<a href="IPay.Api.BodyBuilder.html">BodyBuilder</a>
+		</h1>
+
+
+	<table class="classLikeSignatureTable">
+
+			<tr><th><code>final</code></th></tr>
+
+		<tr>
+			<th><code>extends</code></th>
+			<td>
+<code><a href="ArrayObject.html"><span title="ArrayObject">ArrayObject</span></a>&lt;string, string&gt;</code>			</td>
+		</tr>
+		<tr>
+			<th><code>implements</code></th>
+			<td>
+<code><a href="Stringable.html"><span title="Stringable">Stringable</span></a>, <a href="JsonSerializable.html"><span title="JsonSerializable">JsonSerializable</span></a></code>			</td>
+		</tr>
+
+	</table>
+
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<a href="ArrayObject.html"><span>ArrayObject</span></a>
+
+		implements
+			<a href="IteratorAggregate.html"><span title="IteratorAggregate">IteratorAggregate</span></a>, 
+			<a href="ArrayAccess.html"><span title="ArrayAccess">ArrayAccess</span></a>, 
+			<a href="Serializable.html"><span title="Serializable">Serializable</span></a>, 
+			<a href="Countable.html"><span title="Countable">Countable</span></a>
+
+	<ul class="classTree">
+	<li>
+<b><span class="active">IPay\Api\BodyBuilder</span></b>
+
+		implements
+			<a href="Stringable.html"><span title="Stringable">Stringable</span></a>, 
+			<a href="JsonSerializable.html"><span title="JsonSerializable">JsonSerializable</span></a>
+
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
+
+		<div class="classLikeSection">
+			<b>Located at</b> <a href="source-Api.BodyBuilder.html#11" title="Go to source code">Api/BodyBuilder.php</a><br>
+		</div>
+
+
+
+		<table class="table" id="methods">
+			<tr>
+				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
+			</tr>
+
+	<tr class="expandable collapsed" data-order="from" id="_from">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					static
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Api.BodyBuilder.html#21-27" title="Go to source code">from</a>(<span>string[] <var>$data</var></span>): static</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_from">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="enhance" id="_enhance">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Api.BodyBuilder.html#29-35" title="Go to source code">enhance</a>(<span>string[] <var>$parameters</var></span>): static</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_enhance">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="build" id="_build">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Api.BodyBuilder.html#37-44" title="Go to source code">build</a>(): <b><span class="active" title="IPay\Api\BodyBuilder">self</span></b></code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_build">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="encrypt" id="_encrypt">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Api.BodyBuilder.html#46-49" title="Go to source code">encrypt</a>(): string</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_encrypt">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="__toString" id="___toString">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Api.BodyBuilder.html#51-54" title="Go to source code">__toString</a>(): string</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="Stringable.html#___toString">						<code>Stringable::__toString()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#___toString">#</a>
+		</td>
+	</tr>
+	<tr class="expandable collapsed" data-order="jsonSerialize" id="_jsonSerialize">
+			<td class="table-cell table-shrink">
+				<code class="nowrap">
+					
+	public
+					
+					
+				</code>
+			</td>
+
+			<td class="table-cell">
+				<code><a href="source-Api.BodyBuilder.html#56-63" title="Go to source code">jsonSerialize</a>(): string[]</code>
+
+
+
+	<div class="expandable-expandedView">
+
+
+
+
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="JsonSerializable.html#_jsonSerialize">						<code>JsonSerializable::jsonSerialize()</code></a>				</li>
+		</ul>
+	</div>
+			</td>
+		<td class="table-anchor">
+			<a href="#_jsonSerialize">#</a>
+		</td>
+	</tr>
+		</table>
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods inherited from <a href="ArrayObject.html"><span>ArrayObject</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="ArrayObject.html#___construct">__construct()</a>, <a href="ArrayObject.html#_offsetExists">offsetExists()</a>, <a href="ArrayObject.html#_offsetGet">offsetGet()</a>, <a href="ArrayObject.html#_offsetSet">offsetSet()</a>, <a href="ArrayObject.html#_offsetUnset">offsetUnset()</a>, <a href="ArrayObject.html#_append">append()</a>, <a href="ArrayObject.html#_getArrayCopy">getArrayCopy()</a>, <a href="ArrayObject.html#_count">count()</a>, <a href="ArrayObject.html#_getFlags">getFlags()</a>, <a href="ArrayObject.html#_setFlags">setFlags()</a>, <a href="ArrayObject.html#_asort">asort()</a>, <a href="ArrayObject.html#_ksort">ksort()</a>, <a href="ArrayObject.html#_uasort">uasort()</a>, <a href="ArrayObject.html#_uksort">uksort()</a>, <a href="ArrayObject.html#_natsort">natsort()</a>, <a href="ArrayObject.html#_natcasesort">natcasesort()</a>, <a href="ArrayObject.html#_unserialize">unserialize()</a>, <a href="ArrayObject.html#_serialize">serialize()</a>, <a href="ArrayObject.html#___serialize">__serialize()</a>, <a href="ArrayObject.html#___unserialize">__unserialize()</a>, <a href="ArrayObject.html#_getIterator">getIterator()</a>, <a href="ArrayObject.html#_exchangeArray">exchangeArray()</a>, <a href="ArrayObject.html#_setIteratorClass">setIteratorClass()</a>, <a href="ArrayObject.html#_getIteratorClass">getIteratorClass()</a>, <a href="ArrayObject.html#___debugInfo">__debugInfo()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha.6</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>
