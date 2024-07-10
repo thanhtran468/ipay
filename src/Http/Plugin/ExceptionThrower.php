@@ -4,7 +4,8 @@ namespace IPay\Http\Plugin;
 
 use Http\Client\Common\Plugin;
 use Http\Promise\Promise;
-use IPay\Exception\SessionExpiredException;
+use IPay\Exception\LoginException;
+use IPay\Exception\SessionException;
 use Nette\Utils\Json;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
@@ -15,21 +16,27 @@ final class ExceptionThrower implements Plugin
     {
         return $next($request)->then(function (ResponseInterface $response): ResponseInterface {
             if (200 !== $response->getStatusCode()) {
-                /** @var object{errorCode:string} */
                 $error = Json::decode((string) $response->getBody());
 
-                throw self::createException($error->errorCode);
+                throw self::createException($error);
             }
 
             return $response;
         });
     }
 
-    private static function createException(string $code): \Throwable
+    /**
+     * @param \stdClass&object{errorCode: string, errorMessage?: string} $error
+     */
+    private static function createException(\stdClass $error): \Throwable
     {
-        return match ($code) {
-            '96', '99' => new SessionExpiredException('The session has expired.'),
-            default => new \RuntimeException('Unknown error.'),
+        /** @var class-string<\Exception> */
+        $class = match ($error->errorCode) {
+            'LOGON_CREDENTIALS_REJECTED' => LoginException::class,
+            '96', '99' => SessionException::class,
+            default => \RuntimeException::class,
         };
+
+        return new $class($error->errorMessage ?? 'Unknown error.');
     }
 }

@@ -4,12 +4,11 @@ namespace IPay\Api;
 
 use IPay\Encryption\Encrypter;
 use Nette\Utils\Json;
-use Nette\Utils\Random;
 
 /**
  * @extends \ArrayObject<string,string>
  */
-final class FieldBuilder extends \ArrayObject implements \Stringable, \JsonSerializable
+final class BodyBuilder extends \ArrayObject implements \Stringable, \JsonSerializable
 {
     /**
      * @param string[] $data
@@ -22,17 +21,17 @@ final class FieldBuilder extends \ArrayObject implements \Stringable, \JsonSeria
     /**
      * @param string[] $data
      */
-    public static function with(array $data): static
+    public static function from(array $data): static
     {
         return new static($data);
     }
 
-    public function withRequiredFields(): self
+    /**
+     * @param string[] $parameters
+     */
+    public function enhance(array $parameters): static
     {
-        $this['lang'] = 'en';
-        $this['requestId'] = Random::generate(12, '0-9A-Z').'|'.time();
-
-        return $this;
+        return static::from($this->getArrayCopy() + $parameters);
     }
 
     public function build(): self
@@ -46,9 +45,7 @@ final class FieldBuilder extends \ArrayObject implements \Stringable, \JsonSeria
 
     public function encrypt(): string
     {
-        return new static([
-            'encrypted' => Encrypter::encrypt($this->build()),
-        ]);
+        return static::from(['encrypted' => Encrypter::encrypt($this)]);
     }
 
     public function __toString(): string
