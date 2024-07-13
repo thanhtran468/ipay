@@ -6,21 +6,20 @@
 
 			<url><loc>namespace-IPay.html</loc></url>
 			<url><loc>namespace-IPay.Api.html</loc></url>
+			<url><loc>namespace-IPay.Builder.html</loc></url>
 			<url><loc>namespace-IPay.Captcha.html</loc></url>
 			<url><loc>namespace-IPay.Encryption.html</loc></url>
 			<url><loc>namespace-IPay.Entity.html</loc></url>
 			<url><loc>namespace-IPay.Exception.html</loc></url>
 			<url><loc>namespace-IPay.Http.html</loc></url>
 			<url><loc>namespace-IPay.Http.Plugin.html</loc></url>
+			<url><loc>namespace-IPay.Session.html</loc></url>
 			<url><loc>namespace-none.html</loc></url>
 
 			<url><loc>IPay.Api.AbstractApi.html</loc></url>
 			<url><loc>IPay.Api.AuthenticatedApi.html</loc></url>
-			<url><loc>IPay.Api.AuthenticatedSession.html</loc></url>
-			<url><loc>IPay.Api.BodyBuilder.html</loc></url>
-			<url><loc>IPay.Api.SessionInterface.html</loc></url>
 			<url><loc>IPay.Api.UnauthenticatedApi.html</loc></url>
-			<url><loc>IPay.Api.UnauthenticatedSession.html</loc></url>
+			<url><loc>IPay.Builder.BodyBuilder.html</loc></url>
 			<url><loc>IPay.Captcha.CaptchaSolver.html</loc></url>
 			<url><loc>IPay.Encryption.Encrypter.html</loc></url>
 			<url><loc>IPay.Entity.Account.html</loc></url>
@@ -31,16 +30,16 @@
 			<url><loc>IPay.Exception.SessionException.html</loc></url>
 			<url><loc>IPay.Http.Plugin.ExceptionThrower.html</loc></url>
 			<url><loc>IPay.IPayClient.html</loc></url>
+			<url><loc>IPay.Session.AuthenticatedSession.html</loc></url>
+			<url><loc>IPay.Session.SessionInterface.html</loc></url>
+			<url><loc>IPay.Session.UnauthenticatedSession.html</loc></url>
 
 			<url><loc>function-ipay.html</loc></url>
 
 			<url><loc>source-Api.AbstractApi.html</loc></url>
 			<url><loc>source-Api.AuthenticatedApi.html</loc></url>
-			<url><loc>source-Api.AuthenticatedSession.html</loc></url>
-			<url><loc>source-Api.BodyBuilder.html</loc></url>
-			<url><loc>source-Api.SessionInterface.html</loc></url>
 			<url><loc>source-Api.UnauthenticatedApi.html</loc></url>
-			<url><loc>source-Api.UnauthenticatedSession.html</loc></url>
+			<url><loc>source-Builder.BodyBuilder.html</loc></url>
 			<url><loc>source-Captcha.CaptchaSolver.html</loc></url>
 			<url><loc>source-Encryption.Encrypter.html</loc></url>
 			<url><loc>source-Entity.Account.html</loc></url>
@@ -50,5 +49,8 @@
 			<url><loc>source-Exception.SessionException.html</loc></url>
 			<url><loc>source-Http.Plugin.ExceptionThrower.html</loc></url>
 			<url><loc>source-IPayClient.html</loc></url>
+			<url><loc>source-Session.AuthenticatedSession.html</loc></url>
+			<url><loc>source-Session.SessionInterface.html</loc></url>
+			<url><loc>source-Session.UnauthenticatedSession.html</loc></url>
 			<url><loc>source-functions.html</loc></url>
 </urlset>

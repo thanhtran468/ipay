@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 
-	<title>Interface IPay\Api\SessionInterface |  API</title>
+	<title>Interface IPay\Session\SessionInterface |  API</title>
 	<link rel="stylesheet" href="assets/main.css">
 	<script src="assets/main.js" defer></script>
 </head>
@@ -19,8 +19,11 @@
 			<li class="menuGroup-item active">
 				<a href="namespace-IPay.html">IPay</a>
 	<ul>
-			<li class="menuGroup-item active">
+			<li class="menuGroup-item">
 				<a href="namespace-IPay.Api.html">Api</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Builder.html">Builder</a>
 			</li>
 			<li class="menuGroup-item">
 				<a href="namespace-IPay.Captcha.html">Captcha</a>
@@ -37,6 +40,9 @@
 			<li class="menuGroup-item">
 				<a href="namespace-IPay.Http.html">Http</a>
 			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-IPay.Session.html">Session</a>
+			</li>
 	</ul>
 			</li>
 			<li class="menuGroup-item">
@@ -49,32 +55,12 @@
 			<h3>Classes</h3>
 			<ul>
 					<li>
-						<a href="IPay.Api.AbstractApi.html">
-							AbstractApi
-						</a>
-					</li>
-					<li>
-						<a href="IPay.Api.AuthenticatedApi.html">
-							AuthenticatedApi
-						</a>
-					</li>
-					<li>
-						<a href="IPay.Api.AuthenticatedSession.html">
+						<a href="IPay.Session.AuthenticatedSession.html">
 							AuthenticatedSession
 						</a>
 					</li>
 					<li>
-						<a href="IPay.Api.BodyBuilder.html">
-							BodyBuilder
-						</a>
-					</li>
-					<li>
-						<a href="IPay.Api.UnauthenticatedApi.html">
-							UnauthenticatedApi
-						</a>
-					</li>
-					<li>
-						<a href="IPay.Api.UnauthenticatedSession.html">
+						<a href="IPay.Session.UnauthenticatedSession.html">
 							UnauthenticatedSession
 						</a>
 					</li>
@@ -84,7 +70,7 @@
 			<h3>Interfaces</h3>
 			<ul>
 					<li class="active">
-						<a href="IPay.Api.SessionInterface.html">
+						<a href="IPay.Session.SessionInterface.html">
 							SessionInterface
 						</a>
 					</li>
@@ -103,10 +89,10 @@
 				</li>
 				<li>
 					
-						<a href="namespace-IPay.Api.html">Namespace</a>
+						<a href="namespace-IPay.Session.html">Namespace</a>
 					
 				</li>
-<li class="active"><a href="IPay.Api.SessionInterface.html">Interface</a></li>				<li>
+<li class="active"><a href="IPay.Session.SessionInterface.html">Interface</a></li>				<li>
 					<a href="tree.html">Tree</a>
 				</li>
 			</ul>
@@ -122,7 +108,7 @@
 
 		<div class="layout-content">
 		<h1>
-			Interface <a href="namespace-IPay.html">IPay</a>\<a href="namespace-IPay.Api.html">Api</a>\<a href="IPay.Api.SessionInterface.html">SessionInterface</a>
+			Interface <a href="namespace-IPay.html">IPay</a>\<a href="namespace-IPay.Session.html">Session</a>\<a href="IPay.Session.SessionInterface.html">SessionInterface</a>
 		</h1>
 
 
@@ -133,19 +119,19 @@
 			<div class="classLikeSection">
 	<ul class="classTree">
 	<li>
-<b><span class="active">IPay\Api\SessionInterface</span></b>
+<b><span class="active">IPay\Session\SessionInterface</span></b>
 
 
 	<ul class="classTree">
 	<li>
-<a href="IPay.Api.UnauthenticatedSession.html"><span>IPay\Api\UnauthenticatedSession</span></a>
+<a href="IPay.Session.UnauthenticatedSession.html"><span>IPay\Session\UnauthenticatedSession</span></a>
 
 		implements
-			<b><span class="active" title="IPay\Api\SessionInterface">SessionInterface</span></b>
+			<b><span class="active" title="IPay\Session\SessionInterface">SessionInterface</span></b>
 
 	<ul class="classTree">
 	<li>
-<a href="IPay.Api.AuthenticatedSession.html"><span>IPay\Api\AuthenticatedSession</span></a>
+<a href="IPay.Session.AuthenticatedSession.html"><span>IPay\Session\AuthenticatedSession</span></a>
 
 
 	</li>
@@ -157,7 +143,7 @@
 			</div>
 
 		<div class="classLikeSection">
-			<b>Located at</b> <a href="source-Api.SessionInterface.html#5" title="Go to source code">Api/SessionInterface.php</a><br>
+			<b>Located at</b> <a href="source-Session.SessionInterface.html#5" title="Go to source code">Session/SessionInterface.php</a><br>
 		</div>
 
 
@@ -178,7 +164,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Api.SessionInterface.html#7-10" title="Go to source code">getRequestParameters</a>(): string[]</code>
+				<code><a href="source-Session.SessionInterface.html#7-10" title="Go to source code">getRequestParameters</a>(): string[]</code>
 
 
 
@@ -190,7 +176,7 @@
 		<h4>Implemented by</h4>
 		<ul>
 				<li>
-<a href="IPay.Api.UnauthenticatedSession.html#_getRequestParameters">						<code>IPay\Api\UnauthenticatedSession::getRequestParameters()</code></a>				</li>
+<a href="IPay.Session.UnauthenticatedSession.html#_getRequestParameters">						<code>IPay\Session\UnauthenticatedSession::getRequestParameters()</code></a>				</li>
 		</ul>
 	</div>
 			</td>

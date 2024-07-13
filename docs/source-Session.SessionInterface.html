@@ -4,8 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<meta name="robots" content="noindex">
-	<title>Namespace EventSauce\ObjectHydrator |  API</title>
+
+	<title>File Session/SessionInterface.php |  API</title>
 	<link rel="stylesheet" href="assets/main.css">
 	<script src="assets/main.js" defer></script>
 </head>
@@ -17,14 +17,6 @@
 				<h3>Namespaces</h3>
 	<ul>
 			<li class="menuGroup-item active">
-				<a href="namespace-EventSauce.html">EventSauce</a>
-	<ul>
-			<li class="menuGroup-item active">
-				<a href="namespace-EventSauce.ObjectHydrator.html">ObjectHydrator</a>
-			</li>
-	</ul>
-			</li>
-			<li class="menuGroup-item">
 				<a href="namespace-IPay.html">IPay</a>
 	<ul>
 			<li class="menuGroup-item">
@@ -48,7 +40,7 @@
 			<li class="menuGroup-item">
 				<a href="namespace-IPay.Http.html">Http</a>
 			</li>
-			<li class="menuGroup-item">
+			<li class="menuGroup-item active">
 				<a href="namespace-IPay.Session.html">Session</a>
 			</li>
 	</ul>
@@ -63,8 +55,13 @@
 			<h3>Classes</h3>
 			<ul>
 					<li>
-						<a href="EventSauce.ObjectHydrator.IterableList.html">
-							IterableList
+						<a href="IPay.Session.AuthenticatedSession.html">
+							AuthenticatedSession
+						</a>
+					</li>
+					<li>
+						<a href="IPay.Session.UnauthenticatedSession.html">
+							UnauthenticatedSession
 						</a>
 					</li>
 			</ul>
@@ -72,24 +69,9 @@
 		<div class="menu-section">
 			<h3>Interfaces</h3>
 			<ul>
-					<li>
-						<a href="EventSauce.ObjectHydrator.ObjectMapper.html">
-							ObjectMapper
-						</a>
-					</li>
-			</ul>
-		</div>
-		<div class="menu-section">
-			<h3>Exceptions</h3>
-			<ul>
-					<li>
-						<a href="EventSauce.ObjectHydrator.UnableToHydrateObject.html">
-							UnableToHydrateObject
-						</a>
-					</li>
-					<li>
-						<a href="EventSauce.ObjectHydrator.UnableToSerializeObject.html">
-							UnableToSerializeObject
+					<li class="active">
+						<a href="IPay.Session.SessionInterface.html">
+							SessionInterface
 						</a>
 					</li>
 			</ul>
@@ -105,12 +87,12 @@
 				<li>
 					<a href="index.html">Overview</a>
 				</li>
-				<li class="active">
+				<li>
 					
-						<a href="namespace-EventSauce.ObjectHydrator.html">Namespace</a>
+						<a href="namespace-IPay.Session.html">Namespace</a>
 					
 				</li>
-<li><span>Class</span></li>				<li>
+<li class="active"><a href="IPay.Session.SessionInterface.html">Interface</a></li>				<li>
 					<a href="tree.html">Tree</a>
 				</li>
 			</ul>
@@ -125,50 +107,7 @@
 		</div>
 
 		<div class="layout-content">
-		<h1>Namespace <a href="namespace-EventSauce.html">EventSauce</a>\<a href="namespace-EventSauce.ObjectHydrator.html">ObjectHydrator</a></h1>
-
-	<table class="table elementSummary">
-		<tr>
-			<th class="table-heading" colspan="2">Classes</th>
-		</tr>
-
-			<tr>
-				<td class="table-cell" colspan="1"><a href="EventSauce.ObjectHydrator.IterableList.html">IterableList</a></td>
-				<td class="table-cell"></td>
-			</tr>
-
-		<tr>
-			<td class="table-spacer" colspan="2"></td>
-		</tr>
-		<tr>
-			<th class="table-heading" colspan="2">Interfaces</th>
-		</tr>
-
-			<tr>
-				<td class="table-cell" colspan="1"><a href="EventSauce.ObjectHydrator.ObjectMapper.html">ObjectMapper</a></td>
-				<td class="table-cell"></td>
-			</tr>
-
-		<tr>
-			<td class="table-spacer" colspan="2"></td>
-		</tr>
-		<tr>
-			<th class="table-heading" colspan="2">Exceptions</th>
-		</tr>
-
-			<tr>
-				<td class="table-cell" colspan="1"><a href="EventSauce.ObjectHydrator.UnableToHydrateObject.html">UnableToHydrateObject</a></td>
-				<td class="table-cell"></td>
-			</tr>
-			<tr>
-				<td class="table-cell" colspan="1"><a href="EventSauce.ObjectHydrator.UnableToSerializeObject.html">UnableToSerializeObject</a></td>
-				<td class="table-cell"></td>
-			</tr>
-
-		<tr>
-			<td class="table-spacer" colspan="2"></td>
-		</tr>
-	</table>
+	<table class="source"><tr id="1" class="source-line"><td><a class="source-lineNum" href="#1"> 1: </a></td><td><span class="php-tag">&lt;?php</span></td></tr><tr id="2" class="source-line"><td><a class="source-lineNum" href="#2"> 2: </a></td><td><span class="php-tag"></span></td></tr><tr id="3" class="source-line"><td><a class="source-lineNum" href="#3"> 3: </a></td><td><span class="php-kw">namespace</span> IPay\Session;</td></tr><tr id="4" class="source-line"><td><a class="source-lineNum" href="#4"> 4: </a></td><td></td></tr><tr id="5" class="source-line"><td><a class="source-lineNum" href="#5"> 5: </a></td><td><span class="php-kw">interface</span> SessionInterface</td></tr><tr id="6" class="source-line"><td><a class="source-lineNum" href="#6"> 6: </a></td><td>{</td></tr><tr id="7" class="source-line"><td><a class="source-lineNum" href="#7"> 7: </a></td><td>    <span class="php-comment">/**</span></td></tr><tr id="8" class="source-line"><td><a class="source-lineNum" href="#8"> 8: </a></td><td><span class="php-comment">     * @return string[]</span></td></tr><tr id="9" class="source-line"><td><a class="source-lineNum" href="#9"> 9: </a></td><td><span class="php-comment">     */</span></td></tr><tr id="10" class="source-line"><td><a class="source-lineNum" href="#10">10: </a></td><td>    <span class="php-kw">public</span> <span class="php-kw">function</span> getRequestParameters(): <span class="php-kw">array</span>;</td></tr><tr id="11" class="source-line"><td><a class="source-lineNum" href="#11">11: </a></td><td>}</td></tr><tr id="12" class="source-line"><td><a class="source-lineNum" href="#12">12: </a></td><td></td></tr></table>
 		</div>
 
 		<div class="layout-footer">

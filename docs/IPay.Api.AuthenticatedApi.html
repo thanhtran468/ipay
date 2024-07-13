@@ -23,6 +23,9 @@
 				<a href="namespace-IPay.Api.html">Api</a>
 			</li>
 			<li class="menuGroup-item">
+				<a href="namespace-IPay.Builder.html">Builder</a>
+			</li>
+			<li class="menuGroup-item">
 				<a href="namespace-IPay.Captcha.html">Captcha</a>
 			</li>
 			<li class="menuGroup-item">
@@ -36,6 +39,9 @@
 			</li>
 			<li class="menuGroup-item">
 				<a href="namespace-IPay.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Session.html">Session</a>
 			</li>
 	</ul>
 			</li>
@@ -59,33 +65,8 @@
 						</a>
 					</li>
 					<li>
-						<a href="IPay.Api.AuthenticatedSession.html">
-							AuthenticatedSession
-						</a>
-					</li>
-					<li>
-						<a href="IPay.Api.BodyBuilder.html">
-							BodyBuilder
-						</a>
-					</li>
-					<li>
 						<a href="IPay.Api.UnauthenticatedApi.html">
 							UnauthenticatedApi
-						</a>
-					</li>
-					<li>
-						<a href="IPay.Api.UnauthenticatedSession.html">
-							UnauthenticatedSession
-						</a>
-					</li>
-			</ul>
-		</div>
-		<div class="menu-section">
-			<h3>Interfaces</h3>
-			<ul>
-					<li>
-						<a href="IPay.Api.SessionInterface.html">
-							SessionInterface
 						</a>
 					</li>
 			</ul>
@@ -133,7 +114,7 @@
 		<tr>
 			<th><code>extends</code></th>
 			<td>
-<code><a href="IPay.Api.AbstractApi.html"><span title="IPay\Api\AbstractApi">AbstractApi</span></a>&lt;<a href="IPay.Api.AuthenticatedSession.html"><span title="IPay\Api\AuthenticatedSession">AuthenticatedSession</span></a>&gt;</code>			</td>
+<code><a href="IPay.Api.AbstractApi.html"><span title="IPay\Api\AbstractApi">AbstractApi</span></a>&lt;<a href="IPay.Session.AuthenticatedSession.html"><span title="IPay\Session\AuthenticatedSession">AuthenticatedSession</span></a>&gt;</code>			</td>
 		</tr>
 		<tr>
 			<th><code>uses</code></th>
@@ -163,7 +144,7 @@
 			</div>
 
 		<div class="classLikeSection">
-			<b>Located at</b> <a href="source-Api.AuthenticatedApi.html#15" title="Go to source code">Api/AuthenticatedApi.php</a><br>
+			<b>Located at</b> <a href="source-Api.AuthenticatedApi.html#16" title="Go to source code">Api/AuthenticatedApi.php</a><br>
 		</div>
 
 
@@ -184,7 +165,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Api.AuthenticatedApi.html#24-31" title="Go to source code">__construct</a>(<span><a href="IPay.IPayClient.html"><span title="IPay\IPayClient">IPayClient</span></a> <var>$iPayClient</var></span>, <span><a href="IPay.Api.AuthenticatedSession.html"><span title="IPay\Api\AuthenticatedSession">AuthenticatedSession</span></a> <var>$session</var></span>)</code>
+				<code><a href="source-Api.AuthenticatedApi.html#25-34" title="Go to source code">__construct</a>(<span><a href="IPay.IPayClient.html"><span title="IPay\IPayClient">IPayClient</span></a> <var>$iPayClient</var></span>, <span><a href="IPay.Session.AuthenticatedSession.html"><span title="IPay\Session\AuthenticatedSession">AuthenticatedSession</span></a> <var>$session</var></span>)</code>
 
 
 
@@ -215,7 +196,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Api.AuthenticatedApi.html#63-121" title="Go to source code">historyTransactions</a>(
+				<code><a href="source-Api.AuthenticatedApi.html#66-124" title="Go to source code">historyTransactions</a>(
 	<span>array{accountNumber?: string, tranType?: (<span class="php-str">'Credit'</span>|<span class="php-str">'Debit'</span>|<span class="php-str">''</span>), startDate?: <a href="DateTimeInterface.html"><span title="DateTimeInterface">DateTimeInterface</span></a>, endDate?: <a href="DateTimeInterface.html"><span title="DateTimeInterface">DateTimeInterface</span></a>} <var>$parameters</var></span>,
 ): iterable&lt;int, <a href="IPay.Entity.Transaction.html"><span title="IPay\Entity\Transaction">Transaction</span></a>&gt;</code>
 
@@ -291,7 +272,7 @@
 			</td>
 
 			<td class="table-cell">
-<code><var><a href="source-Api.AuthenticatedApi.html#19" title="Go to source code">$customer</a></var></code>
+<code><var><a href="source-Api.AuthenticatedApi.html#20" title="Go to source code">$customer</a></var></code>
 				
 
 	<div class="expandable-expandedView">
@@ -315,7 +296,7 @@
 			</td>
 
 			<td class="table-cell">
-<code><var><a href="source-Api.AuthenticatedApi.html#21-22" title="Go to source code">$accounts</a></var></code>
+<code><var><a href="source-Api.AuthenticatedApi.html#22-23" title="Go to source code">$accounts</a></var></code>
 				
 
 	<div class="expandable-expandedView">

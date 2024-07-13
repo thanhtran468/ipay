@@ -23,6 +23,9 @@
 				<a href="namespace-IPay.Api.html">Api</a>
 			</li>
 			<li class="menuGroup-item">
+				<a href="namespace-IPay.Builder.html">Builder</a>
+			</li>
+			<li class="menuGroup-item">
 				<a href="namespace-IPay.Captcha.html">Captcha</a>
 			</li>
 			<li class="menuGroup-item">
@@ -36,6 +39,9 @@
 			</li>
 			<li class="menuGroup-item">
 				<a href="namespace-IPay.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Session.html">Session</a>
 			</li>
 	</ul>
 			</li>
@@ -59,33 +65,8 @@
 						</a>
 					</li>
 					<li>
-						<a href="IPay.Api.AuthenticatedSession.html">
-							AuthenticatedSession
-						</a>
-					</li>
-					<li>
-						<a href="IPay.Api.BodyBuilder.html">
-							BodyBuilder
-						</a>
-					</li>
-					<li>
 						<a href="IPay.Api.UnauthenticatedApi.html">
 							UnauthenticatedApi
-						</a>
-					</li>
-					<li>
-						<a href="IPay.Api.UnauthenticatedSession.html">
-							UnauthenticatedSession
-						</a>
-					</li>
-			</ul>
-		</div>
-		<div class="menu-section">
-			<h3>Interfaces</h3>
-			<ul>
-					<li>
-						<a href="IPay.Api.SessionInterface.html">
-							SessionInterface
 						</a>
 					</li>
 			</ul>
@@ -125,7 +106,7 @@
 			Class <a href="namespace-IPay.html">IPay</a>\<a href="namespace-IPay.Api.html">Api</a>\<a href="IPay.Api.AbstractApi.html">AbstractApi</a>
 		</h1>
 
-			<h2><code>&lt;<span title="">T</span> is <a href="IPay.Api.SessionInterface.html"><span title="IPay\Api\SessionInterface">SessionInterface</span></a>&gt;</code></h2>
+			<h2><code>&lt;<span title="">T</span> is <a href="IPay.Session.SessionInterface.html"><span title="IPay\Session\SessionInterface">SessionInterface</span></a>&gt;</code></h2>
 
 	<table class="classLikeSignatureTable">
 			<tr><th><code>abstract</code></th></tr>
@@ -159,7 +140,7 @@
 			</div>
 
 		<div class="classLikeSection">
-			<b>Located at</b> <a href="source-Api.AbstractApi.html#16" title="Go to source code">Api/AbstractApi.php</a><br>
+			<b>Located at</b> <a href="source-Api.AbstractApi.html#18" title="Go to source code">Api/AbstractApi.php</a><br>
 		</div>
 
 
@@ -180,7 +161,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Api.AbstractApi.html#20-32" title="Go to source code">__construct</a>(<span><a href="IPay.IPayClient.html"><span title="IPay\IPayClient">IPayClient</span></a> <var>$iPayClient</var></span>, <span>T <var>$session</var></span>)</code>
+				<code><a href="source-Api.AbstractApi.html#22-34" title="Go to source code">__construct</a>(<span><a href="IPay.IPayClient.html"><span title="IPay\IPayClient">IPayClient</span></a> <var>$iPayClient</var></span>, <span>T <var>$session</var></span>)</code>
 
 
 
@@ -211,7 +192,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Api.AbstractApi.html#34-51" title="Go to source code">post</a>(<span>string <var>$uri</var></span>, <span>string[] <var>$parameters</var> = []</span>): mixed[]</code>
+				<code><a href="source-Api.AbstractApi.html#36-53" title="Go to source code">post</a>(<span>string <var>$uri</var></span>, <span>string[] <var>$parameters</var> = []</span>): mixed[]</code>
 
 
 
@@ -237,7 +218,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Api.AbstractApi.html#53-56" title="Go to source code">createOptionsResolver</a>(): <a href="Symfony.Component.OptionsResolver.OptionsResolver.html"><span title="Symfony\Component\OptionsResolver\OptionsResolver">OptionsResolver</span></a></code>
+				<code><a href="source-Api.AbstractApi.html#55-58" title="Go to source code">createOptionsResolver</a>(): <a href="Symfony.Component.OptionsResolver.OptionsResolver.html"><span title="Symfony\Component\OptionsResolver\OptionsResolver">OptionsResolver</span></a></code>
 
 
 
@@ -263,7 +244,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Api.AbstractApi.html#58-64" title="Go to source code">getSession</a>(): T</code>
+				<code><a href="source-Api.AbstractApi.html#60-66" title="Go to source code">getSession</a>(): T</code>
 
 
 
@@ -304,7 +285,7 @@
 			</td>
 
 			<td class="table-cell">
-<code><var><a href="source-Api.AbstractApi.html#18" title="Go to source code">$objectMapper</a></var></code>
+<code><var><a href="source-Api.AbstractApi.html#20" title="Go to source code">$objectMapper</a></var></code>
 				
 
 	<div class="expandable-expandedView">
@@ -328,7 +309,7 @@
 			</td>
 
 			<td class="table-cell">
-<code><var><a href="source-Api.AbstractApi.html#24" title="Go to source code">$iPayClient</a></var></code>
+<code><var><a href="source-Api.AbstractApi.html#26" title="Go to source code">$iPayClient</a></var></code>
 				
 
 	<div class="expandable-expandedView">
