@@ -1,6 +1,6 @@
 <?php
 
-namespace IPay\Api;
+namespace IPay\Session;
 
 interface SessionInterface
 {

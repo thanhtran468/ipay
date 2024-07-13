@@ -9,11 +9,9 @@ use Http\Client\Common\Plugin\ContentTypePlugin;
 use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
-use IPay\Api\AuthenticatedApi;
-use IPay\Api\AuthenticatedSession;
 use IPay\Api\UnauthenticatedApi;
-use IPay\Api\UnauthenticatedSession;
 use IPay\Http\Plugin\ExceptionThrower;
+use IPay\Session\UnauthenticatedSession;
 
 final class IPayClient
 {
@@ -47,10 +45,5 @@ final class IPayClient
     public function guest(): UnauthenticatedApi
     {
         return new UnauthenticatedApi($this, new UnauthenticatedSession());
-    }
-
-    public function session(string $id): AuthenticatedApi
-    {
-        return new AuthenticatedApi($this, new AuthenticatedSession($id));
     }
 }

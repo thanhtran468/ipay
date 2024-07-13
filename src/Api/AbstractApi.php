@@ -6,7 +6,9 @@ use EventSauce\ObjectHydrator\DefinitionProvider;
 use EventSauce\ObjectHydrator\KeyFormatterWithoutConversion;
 use EventSauce\ObjectHydrator\ObjectMapper;
 use EventSauce\ObjectHydrator\ObjectMapperUsingReflection;
+use IPay\Builder\BodyBuilder;
 use IPay\IPayClient;
+use IPay\Session\SessionInterface;
 use Nette\Utils\Json;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 

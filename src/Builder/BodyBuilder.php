@@ -1,6 +1,6 @@
 <?php
 
-namespace IPay\Api;
+namespace IPay\Builder;
 
 use IPay\Encryption\Encrypter;
 use Nette\Utils\Json;

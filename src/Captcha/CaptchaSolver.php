@@ -33,8 +33,10 @@ final class CaptchaSolver
         $result = '';
         foreach ($pathCommands as $pathCommand) {
             /**
-             * Only keep path commands
+             * Only keep path commands.
+             *
              * @see https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d#path_commands
+             *
              * @var string
              */
             $paths = preg_replace('/[^MLHVCSQTAZmlhvcsqtaz]/', '', $pathCommand);

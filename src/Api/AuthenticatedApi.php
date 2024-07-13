@@ -6,6 +6,7 @@ use IPay\Entity\Account;
 use IPay\Entity\Customer;
 use IPay\Entity\Transaction;
 use IPay\IPayClient;
+use IPay\Session\AuthenticatedSession;
 use Symfony\Component\OptionsResolver\Options;
 use Symfony\Component\VarExporter\LazyGhostTrait;
 
@@ -21,8 +22,10 @@ final class AuthenticatedApi extends AbstractApi
     /** @var list<Account> */
     public array $accounts;
 
-    public function __construct(IPayClient $iPayClient, AuthenticatedSession $session)
-    {
+    public function __construct(
+        IPayClient $iPayClient,
+        AuthenticatedSession $session,
+    ) {
         parent::__construct($iPayClient, $session);
         self::createLazyGhost(
             initializer: $this->populateLazyProperties(...),

@@ -3,6 +3,8 @@
 namespace IPay\Api;
 
 use IPay\Captcha\CaptchaSolver;
+use IPay\Session\AuthenticatedSession;
+use IPay\Session\UnauthenticatedSession;
 use Nette\Utils\Random;
 
 /**
