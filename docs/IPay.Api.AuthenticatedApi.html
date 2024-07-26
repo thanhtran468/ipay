@@ -35,6 +35,9 @@
 				<a href="namespace-IPay.Entity.html">Entity</a>
 			</li>
 			<li class="menuGroup-item">
+				<a href="namespace-IPay.Enum.html">Enum</a>
+			</li>
+			<li class="menuGroup-item">
 				<a href="namespace-IPay.Exception.html">Exception</a>
 			</li>
 			<li class="menuGroup-item">
@@ -62,11 +65,6 @@
 					<li class="active">
 						<a href="IPay.Api.AuthenticatedApi.html">
 							AuthenticatedApi
-						</a>
-					</li>
-					<li>
-						<a href="IPay.Api.UnauthenticatedApi.html">
-							UnauthenticatedApi
 						</a>
 					</li>
 			</ul>
@@ -144,7 +142,7 @@
 			</div>
 
 		<div class="classLikeSection">
-			<b>Located at</b> <a href="source-Api.AuthenticatedApi.html#16" title="Go to source code">Api/AuthenticatedApi.php</a><br>
+			<b>Located at</b> <a href="source-Api.AuthenticatedApi.html#19" title="Go to source code">Api/AuthenticatedApi.php</a><br>
 		</div>
 
 
@@ -165,7 +163,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Api.AuthenticatedApi.html#25-34" title="Go to source code">__construct</a>(<span><a href="IPay.IPayClient.html"><span title="IPay\IPayClient">IPayClient</span></a> <var>$iPayClient</var></span>, <span><a href="IPay.Session.AuthenticatedSession.html"><span title="IPay\Session\AuthenticatedSession">AuthenticatedSession</span></a> <var>$session</var></span>)</code>
+				<code><a href="source-Api.AuthenticatedApi.html#28-37" title="Go to source code">__construct</a>(<span><a href="IPay.IPayClient.html"><span title="IPay\IPayClient">IPayClient</span></a> <var>$iPayClient</var></span>, <span><a href="IPay.Session.AuthenticatedSession.html"><span title="IPay\Session\AuthenticatedSession">AuthenticatedSession</span></a> <var>$session</var></span>)</code>
 
 
 
@@ -185,7 +183,7 @@
 			<a href="#___construct">#</a>
 		</td>
 	</tr>
-	<tr class="expandable collapsed" data-order="historyTransactions" id="_historyTransactions">
+	<tr class="expandable collapsed" data-order="transactions" id="_transactions">
 			<td class="table-cell table-shrink">
 				<code class="nowrap">
 					
@@ -196,9 +194,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Api.AuthenticatedApi.html#66-124" title="Go to source code">historyTransactions</a>(
-	<span>array{accountNumber?: string, tranType?: (<span class="php-str">'Credit'</span>|<span class="php-str">'Debit'</span>|<span class="php-str">''</span>), startDate?: <a href="DateTimeInterface.html"><span title="DateTimeInterface">DateTimeInterface</span></a>, endDate?: <a href="DateTimeInterface.html"><span title="DateTimeInterface">DateTimeInterface</span></a>} <var>$parameters</var></span>,
-): iterable&lt;int, <a href="IPay.Entity.Transaction.html"><span title="IPay\Entity\Transaction">Transaction</span></a>&gt;</code>
+				<code><a href="source-Api.AuthenticatedApi.html#69-75" title="Go to source code">transactions</a>(<span>?string <var>$accountNumber</var> = <span class="php-kw">null</span></span>): <a href="IPay.Builder.TransactionBuilder.html"><span title="IPay\Builder\TransactionBuilder">TransactionBuilder</span></a></code>
 
 
 
@@ -206,18 +202,11 @@
 
 
 
-							<h4>Throws</h4>
-							<table>
-									<tr>
-										<td><code><a href="IPay.Exception.SessionException.html"><span>IPay\Exception\SessionException</span></a></code>&nbsp;</td>
-										<td></td>
-									</tr>
-							</table>
 
 	</div>
 			</td>
 		<td class="table-anchor">
-			<a href="#_historyTransactions">#</a>
+			<a href="#_transactions">#</a>
 		</td>
 	</tr>
 		</table>
@@ -272,7 +261,7 @@
 			</td>
 
 			<td class="table-cell">
-<code><var><a href="source-Api.AuthenticatedApi.html#20" title="Go to source code">$customer</a></var></code>
+<code><var><a href="source-Api.AuthenticatedApi.html#23" title="Go to source code">$customer</a></var></code>
 				
 
 	<div class="expandable-expandedView">
@@ -296,7 +285,7 @@
 			</td>
 
 			<td class="table-cell">
-<code><var><a href="source-Api.AuthenticatedApi.html#22-23" title="Go to source code">$accounts</a></var></code>
+<code><var><a href="source-Api.AuthenticatedApi.html#25-26" title="Go to source code">$accounts</a></var></code>
 				
 
 	<div class="expandable-expandedView">

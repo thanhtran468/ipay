@@ -35,6 +35,9 @@
 				<a href="namespace-IPay.Entity.html">Entity</a>
 			</li>
 			<li class="menuGroup-item">
+				<a href="namespace-IPay.Enum.html">Enum</a>
+			</li>
+			<li class="menuGroup-item">
 				<a href="namespace-IPay.Exception.html">Exception</a>
 			</li>
 			<li class="menuGroup-item">
@@ -106,7 +109,7 @@
 
 
 		<div class="classLikeSection">
-			<b>Located at</b> <a href="source-IPayClient.html#16" title="Go to source code">IPayClient.php</a><br>
+			<b>Located at</b> <a href="source-IPayClient.html#17" title="Go to source code">IPayClient.php</a><br>
 		</div>
 
 
@@ -127,7 +130,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-IPayClient.html#18-33" title="Go to source code">create</a>(): static</code>
+				<code><a href="source-IPayClient.html#19-34" title="Go to source code">create</a>(): static</code>
 
 
 
@@ -153,7 +156,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-IPayClient.html#40-43" title="Go to source code">getClient</a>(): <a href="Http.Client.Common.HttpMethodsClientInterface.html"><span title="Http\Client\Common\HttpMethodsClientInterface">HttpMethodsClientInterface</span></a></code>
+				<code><a href="source-IPayClient.html#41-44" title="Go to source code">getClient</a>(): <a href="Http.Client.Common.HttpMethodsClientInterface.html"><span title="Http\Client\Common\HttpMethodsClientInterface">HttpMethodsClientInterface</span></a></code>
 
 
 
@@ -168,7 +171,7 @@
 			<a href="#_getClient">#</a>
 		</td>
 	</tr>
-	<tr class="expandable collapsed" data-order="guest" id="_guest">
+	<tr class="expandable collapsed" data-order="login" id="_login">
 			<td class="table-cell table-shrink">
 				<code class="nowrap">
 					
@@ -179,7 +182,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-IPayClient.html#45-48" title="Go to source code">guest</a>(): <a href="IPay.Api.UnauthenticatedApi.html"><span title="IPay\Api\UnauthenticatedApi">UnauthenticatedApi</span></a></code>
+				<code><a href="source-IPayClient.html#46-53" title="Go to source code">login</a>(<span>string <var>$userName</var></span>, <span>string <var>$accessCode</var></span>): <a href="IPay.Api.AuthenticatedApi.html"><span title="IPay\Api\AuthenticatedApi">AuthenticatedApi</span></a></code>
 
 
 
@@ -187,11 +190,18 @@
 
 
 
+							<h4>Throws</h4>
+							<table>
+									<tr>
+										<td><code><a href="IPay.Exception.LoginException.html"><span>IPay\Exception\LoginException</span></a></code>&nbsp;</td>
+										<td></td>
+									</tr>
+							</table>
 
 	</div>
 			</td>
 		<td class="table-anchor">
-			<a href="#_guest">#</a>
+			<a href="#_login">#</a>
 		</td>
 	</tr>
 		</table>

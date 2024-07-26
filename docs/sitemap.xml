@@ -10,6 +10,7 @@
 			<url><loc>namespace-IPay.Captcha.html</loc></url>
 			<url><loc>namespace-IPay.Encryption.html</loc></url>
 			<url><loc>namespace-IPay.Entity.html</loc></url>
+			<url><loc>namespace-IPay.Enum.html</loc></url>
 			<url><loc>namespace-IPay.Exception.html</loc></url>
 			<url><loc>namespace-IPay.Http.html</loc></url>
 			<url><loc>namespace-IPay.Http.Plugin.html</loc></url>
@@ -18,14 +19,15 @@
 
 			<url><loc>IPay.Api.AbstractApi.html</loc></url>
 			<url><loc>IPay.Api.AuthenticatedApi.html</loc></url>
-			<url><loc>IPay.Api.UnauthenticatedApi.html</loc></url>
 			<url><loc>IPay.Builder.BodyBuilder.html</loc></url>
+			<url><loc>IPay.Builder.TransactionBuilder.html</loc></url>
 			<url><loc>IPay.Captcha.CaptchaSolver.html</loc></url>
 			<url><loc>IPay.Encryption.Encrypter.html</loc></url>
 			<url><loc>IPay.Entity.Account.html</loc></url>
 			<url><loc>IPay.Entity.AccountState.html</loc></url>
 			<url><loc>IPay.Entity.Customer.html</loc></url>
 			<url><loc>IPay.Entity.Transaction.html</loc></url>
+			<url><loc>IPay.Enum.TransactionType.html</loc></url>
 			<url><loc>IPay.Exception.LoginException.html</loc></url>
 			<url><loc>IPay.Exception.SessionException.html</loc></url>
 			<url><loc>IPay.Http.Plugin.ExceptionThrower.html</loc></url>
@@ -38,13 +40,14 @@
 
 			<url><loc>source-Api.AbstractApi.html</loc></url>
 			<url><loc>source-Api.AuthenticatedApi.html</loc></url>
-			<url><loc>source-Api.UnauthenticatedApi.html</loc></url>
 			<url><loc>source-Builder.BodyBuilder.html</loc></url>
+			<url><loc>source-Builder.TransactionBuilder.html</loc></url>
 			<url><loc>source-Captcha.CaptchaSolver.html</loc></url>
 			<url><loc>source-Encryption.Encrypter.html</loc></url>
 			<url><loc>source-Entity.Account.html</loc></url>
 			<url><loc>source-Entity.Customer.html</loc></url>
 			<url><loc>source-Entity.Transaction.html</loc></url>
+			<url><loc>source-Enum.TransactionType.html</loc></url>
 			<url><loc>source-Exception.LoginException.html</loc></url>
 			<url><loc>source-Exception.SessionException.html</loc></url>
 			<url><loc>source-Http.Plugin.ExceptionThrower.html</loc></url>
