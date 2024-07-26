@@ -8,30 +8,15 @@ use IPay\Session\UnauthenticatedSession;
 use Nette\Utils\Random;
 
 /**
+ * @internal
+ *
  * @extends AbstractApi<UnauthenticatedSession>
  */
 final class UnauthenticatedApi extends AbstractApi
 {
-    /**
-     * @param array{
-     *      userName: string,
-     *      accessCode: string,
-     * } $credentials
-     *
-     * @throws \IPay\Exception\LoginException
-     */
-    public function login(array $credentials): AuthenticatedApi
+    public function login(string $userName, string $accessCode): AuthenticatedApi
     {
-        $resolver = self::createOptionsResolver()
-            ->setRequired([
-                'userName',
-                'accessCode',
-            ])
-            ->setAllowedTypes('userName', 'string')
-            ->setAllowedTypes('accessCode', 'string')
-        ;
-
-        $parameters = $resolver->resolve($credentials) + $this->bypassCaptcha();
+        $parameters = get_defined_vars() + $this->bypassCaptcha();
 
         /** @var array{sessionId: string, ...} */
         $result = $this->post('signIn', $parameters);

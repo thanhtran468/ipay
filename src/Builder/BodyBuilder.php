@@ -7,27 +7,29 @@ use Nette\Utils\Json;
 
 /**
  * @extends \ArrayObject<string,string>
+ *
+ * @psalm-type ParametersType = string[]
  */
 final class BodyBuilder extends \ArrayObject implements \Stringable, \JsonSerializable
 {
     /**
-     * @param string[] $data
+     * @param ParametersType $array
      */
-    private function __construct(array $data)
+    private function __construct(array $array)
     {
-        parent::__construct($data);
+        parent::__construct($array);
     }
 
     /**
-     * @param string[] $data
+     * @param ParametersType $parameters
      */
-    public static function from(array $data): static
+    public static function from(array $parameters): static
     {
-        return new static($data);
+        return new static($parameters);
     }
 
     /**
-     * @param string[] $parameters
+     * @param ParametersType $parameters
      */
     public function enhance(array $parameters): static
     {

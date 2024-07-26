@@ -2,6 +2,7 @@
 
 namespace IPay\Api;
 
+use IPay\Builder\TransactionBuilder;
 use IPay\Entity\Account;
 use IPay\Entity\Customer;
 use IPay\Entity\Transaction;
@@ -11,6 +12,8 @@ use Symfony\Component\OptionsResolver\Options;
 use Symfony\Component\VarExporter\LazyGhostTrait;
 
 /**
+ * @psalm-import-type ParametersType from TransactionBuilder
+ *
  * @extends AbstractApi<AuthenticatedSession>
  */
 final class AuthenticatedApi extends AbstractApi
@@ -63,19 +66,24 @@ final class AuthenticatedApi extends AbstractApi
         )->toArray();
     }
 
+    public function transactions(?string $accountNumber = null): TransactionBuilder
+    {
+        return new TransactionBuilder(
+            ['accountNumber' => $accountNumber ?? $this->customer->accountNumber],
+            $this,
+        );
+    }
+
     /**
-     * @param array{
-     *      accountNumber?: string,
-     *      tranType?: 'Credit'|'Debit'|'',
-     *      startDate?: \DateTimeInterface,
-     *      endDate?: \DateTimeInterface,
-     * } $parameters
+     * @internal
      *
-     * @return iterable<int, Transaction>
+     * @param ParametersType $parameters
+     *
+     * @return \Traversable<int, Transaction>
      *
      * @throws \IPay\Exception\SessionException
      */
-    public function historyTransactions(array $parameters): iterable
+    public function historyTransactions(array $parameters): \Traversable
     {
         $datetimeNormalizer = static function (
             Options $resolver,
@@ -85,8 +93,8 @@ final class AuthenticatedApi extends AbstractApi
         };
 
         $resolver = self::createOptionsResolver()
-            ->setRequired([
-                'accountNumber',
+            ->setRequired('accountNumber')
+            ->setDefined([
                 'tranType',
                 'startDate',
                 'endDate',
@@ -97,12 +105,6 @@ final class AuthenticatedApi extends AbstractApi
             ->setAllowedTypes('endDate', \DateTimeInterface::class)
             ->setNormalizer('startDate', $datetimeNormalizer)
             ->setNormalizer('endDate', $datetimeNormalizer)
-            ->setDefaults([
-                'accountNumber' => $this->customer->accountNumber,
-                'tranType' => 'Credit',
-                'startDate' => new \DateTimeImmutable(),
-                'endDate' => new \DateTimeImmutable(),
-            ])
         ;
 
         $parameters = $resolver->resolve($parameters);
