@@ -6,6 +6,7 @@ use IPay\Builder\TransactionBuilder;
 use IPay\Entity\Account;
 use IPay\Entity\Customer;
 use IPay\Entity\Transaction;
+use IPay\Enum\TransactionType;
 use IPay\IPayClient;
 use IPay\Session\AuthenticatedSession;
 use Symfony\Component\OptionsResolver\Options;
@@ -70,27 +71,28 @@ final class AuthenticatedApi extends AbstractApi
     {
         return new TransactionBuilder(
             ['accountNumber' => $accountNumber ?? $this->customer->accountNumber],
-            $this,
+            $this->getTransactions(...),
         );
     }
 
     /**
-     * @internal
-     *
      * @param ParametersType $parameters
      *
      * @return \Traversable<int, Transaction>
      *
      * @throws \IPay\Exception\SessionException
      */
-    public function historyTransactions(array $parameters): \Traversable
+    private function getTransactions(array $parameters): \Traversable
     {
-        $datetimeNormalizer = static function (
+        $datetimeNormalizer = fn (
             Options $resolver,
             \DateTimeInterface $value
-        ): string {
-            return $value->format('Y-m-d');
-        };
+        ): string => $value->format('Y-m-d');
+
+        $transactionTypeNormalizer = fn (
+            Options $resolver,
+            TransactionType $value
+        ): string => $value->value;
 
         $resolver = self::createOptionsResolver()
             ->setRequired('accountNumber')
@@ -100,9 +102,10 @@ final class AuthenticatedApi extends AbstractApi
                 'endDate',
             ])
             ->setAllowedTypes('accountNumber', 'string')
-            ->setAllowedValues('tranType', ['Credit', 'Debit', ''])
+            ->setAllowedTypes('tranType', TransactionType::class)
             ->setAllowedTypes('startDate', \DateTimeInterface::class)
             ->setAllowedTypes('endDate', \DateTimeInterface::class)
+            ->setNormalizer('tranType', $transactionTypeNormalizer)
             ->setNormalizer('startDate', $datetimeNormalizer)
             ->setNormalizer('endDate', $datetimeNormalizer)
         ;

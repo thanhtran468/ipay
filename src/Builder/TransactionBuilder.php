@@ -2,27 +2,28 @@
 
 namespace IPay\Builder;
 
-use IPay\Api\AuthenticatedApi;
+use IPay\Entity\Transaction;
 use IPay\Enum\TransactionType;
 
 /**
  * @psalm-type ParametersType = array{
  *      accountNumber: string,
- *      tranType?: value-of<TransactionType>,
+ *      tranType?: TransactionType,
  *      startDate?: \DateTimeInterface,
  *      endDate?: \DateTimeInterface,
  * }
  *
- * @implements \IteratorAggregate<int,\IPay\Entity\Transaction>
+ * @implements \IteratorAggregate<int,Transaction>
  */
 final class TransactionBuilder implements \IteratorAggregate
 {
     /**
-     * @param ParametersType $parameters
+     * @param ParametersType                                     $parameters
+     * @param \Closure(ParametersType):\Traversable<Transaction> $getter
      */
     public function __construct(
         private array $parameters,
-        private AuthenticatedApi $api,
+        private \Closure $getter,
     ) {
     }
 
@@ -46,13 +47,13 @@ final class TransactionBuilder implements \IteratorAggregate
 
     public function type(TransactionType $type): self
     {
-        $this->parameters['tranType'] = $type->value;
+        $this->parameters['tranType'] = $type;
 
         return $this;
     }
 
     public function getIterator(): \Traversable
     {
-        return $this->api->historyTransactions($this->parameters);
+        return ($this->getter)($this->parameters);
     }
 }
