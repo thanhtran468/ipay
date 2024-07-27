@@ -13,10 +13,7 @@ require __DIR__.'/vendor/autoload.php';
 $ipay = IPayClient::create();
 
 try {
-    $session = $ipay->login(
-        userName: 'username',
-        accessCode: 'password',
-    );
+    $session = $ipay->login($username, $password);
 
     $transactions = $session->transactions()
         ->type(TransactionType::CREDIT)
