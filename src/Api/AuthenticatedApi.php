@@ -39,29 +39,11 @@ final class AuthenticatedApi extends AbstractApi
 
     private function populateLazyProperties(): void
     {
-        $this->customer = $this->customer();
-        $this->accounts = $this->accounts();
-    }
-
-    /**
-     * @throws \IPay\Exception\SessionException
-     */
-    private function customer(): Customer
-    {
-        return $this->objectMapper->hydrateObject(
+        $this->customer = $this->objectMapper->hydrateObject(
             Customer::class,
             $this->post('getCustomerDetails')['customerInfo'],
         );
-    }
-
-    /**
-     * @return list<Account>
-     *
-     * @throws \IPay\Exception\SessionException
-     */
-    private function accounts(): array
-    {
-        return $this->objectMapper->hydrateObjects(
+        $this->accounts = $this->objectMapper->hydrateObjects(
             Account::class,
             $this->post('getEntitiesAndAccounts')['accounts'],
         )->toArray();
