@@ -15,7 +15,6 @@
 			<url><loc>namespace-IPay.Http.html</loc></url>
 			<url><loc>namespace-IPay.Http.Plugin.html</loc></url>
 			<url><loc>namespace-IPay.Session.html</loc></url>
-			<url><loc>namespace-none.html</loc></url>
 
 			<url><loc>IPay.Api.AbstractApi.html</loc></url>
 			<url><loc>IPay.Api.AuthenticatedApi.html</loc></url>
@@ -36,7 +35,6 @@
 			<url><loc>IPay.Session.SessionInterface.html</loc></url>
 			<url><loc>IPay.Session.UnauthenticatedSession.html</loc></url>
 
-			<url><loc>function-ipay.html</loc></url>
 
 			<url><loc>source-Api.AbstractApi.html</loc></url>
 			<url><loc>source-Api.AuthenticatedApi.html</loc></url>
@@ -55,5 +53,4 @@
 			<url><loc>source-Session.AuthenticatedSession.html</loc></url>
 			<url><loc>source-Session.SessionInterface.html</loc></url>
 			<url><loc>source-Session.UnauthenticatedSession.html</loc></url>
-			<url><loc>source-functions.html</loc></url>
 </urlset>
