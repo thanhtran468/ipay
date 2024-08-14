@@ -10,10 +10,8 @@ use IPay\IPayClient;
 
 require __DIR__.'/vendor/autoload.php';
 
-$ipay = IPayClient::create();
-
 try {
-    $session = $ipay->login($username, $password);
+    $session = IPayClient::fromCredentials('username', 'password');
 
     $transactions = $session->transactions()
         ->type(TransactionType::CREDIT)

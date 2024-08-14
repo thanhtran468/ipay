@@ -16,13 +16,17 @@ use IPay\Session\UnauthenticatedSession;
 
 final class IPayClient
 {
-    public static function create(): static
+    /**
+     * @throws Exception\LoginException
+     */
+    public static function fromCredentials(string $username, string $password): AuthenticatedApi
     {
-        return new self(
+        $ipayClient = new self(
             new HttpMethodsClient(
                 new PluginClient(Psr18ClientDiscovery::find(), [
-                    new BaseUriPlugin(Psr17FactoryDiscovery::findUriFactory()
-                        ->createUri('https://api-ipay.vietinbank.vn')
+                    new BaseUriPlugin(
+                        Psr17FactoryDiscovery::findUriFactory()
+                            ->createUri('https://api-ipay.vietinbank.vn')
                     ),
                     new ContentTypePlugin(),
                     new ExceptionThrower(),
@@ -31,6 +35,9 @@ final class IPayClient
                 Psr17FactoryDiscovery::findStreamFactory(),
             ),
         );
+
+        return (new UnauthenticatedApi($ipayClient, new UnauthenticatedSession()))
+            ->login($username, $password);
     }
 
     private function __construct(
@@ -41,14 +48,5 @@ final class IPayClient
     public function getClient(): HttpMethodsClientInterface
     {
         return $this->client;
-    }
-
-    /**
-     * @throws Exception\LoginException
-     */
-    public function login(string $userName, string $accessCode): AuthenticatedApi
-    {
-        return (new UnauthenticatedApi($this, new UnauthenticatedSession()))
-            ->login($userName, $accessCode);
     }
 }

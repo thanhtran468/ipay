@@ -4,8 +4,9 @@
     "type": "library",
     "license": "MIT",
     "autoload": {
-        "classmap": ["src"],
-        "files": ["src/functions.php"]
+        "classmap": [
+            "src"
+        ]
     },
     "authors": [
         {
