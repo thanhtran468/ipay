@@ -6,10 +6,8 @@ use IPay\Builder\TransactionBuilder;
 use IPay\Entity\Account;
 use IPay\Entity\Customer;
 use IPay\Entity\Transaction;
-use IPay\Enum\TransactionType;
 use IPay\IPayClient;
 use IPay\Session\AuthenticatedSession;
-use Symfony\Component\OptionsResolver\Options;
 use Symfony\Component\VarExporter\LazyGhostTrait;
 
 /**
@@ -66,34 +64,6 @@ final class AuthenticatedApi extends AbstractApi
      */
     private function getTransactions(array $parameters): \Traversable
     {
-        $datetimeNormalizer = fn (
-            Options $resolver,
-            \DateTimeInterface $value
-        ): string => $value->format('Y-m-d');
-
-        $transactionTypeNormalizer = fn (
-            Options $resolver,
-            TransactionType $value
-        ): string => $value->value;
-
-        $resolver = self::createOptionsResolver()
-            ->setRequired('accountNumber')
-            ->setDefined([
-                'tranType',
-                'startDate',
-                'endDate',
-            ])
-            ->setAllowedTypes('accountNumber', 'string')
-            ->setAllowedTypes('tranType', TransactionType::class)
-            ->setAllowedTypes('startDate', \DateTimeInterface::class)
-            ->setAllowedTypes('endDate', \DateTimeInterface::class)
-            ->setNormalizer('tranType', $transactionTypeNormalizer)
-            ->setNormalizer('startDate', $datetimeNormalizer)
-            ->setNormalizer('endDate', $datetimeNormalizer)
-        ;
-
-        $parameters = $resolver->resolve($parameters);
-
         $parameters['pageNumber'] = 0;
         do {
             $transactions = $this->post(

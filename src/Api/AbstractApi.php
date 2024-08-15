@@ -10,9 +10,10 @@ use IPay\Builder\BodyBuilder;
 use IPay\IPayClient;
 use IPay\Session\SessionInterface;
 use Nette\Utils\Json;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
+ * @psalm-import-type ParametersType from BodyBuilder
+ *
  * @template T of SessionInterface
  */
 abstract class AbstractApi
@@ -34,7 +35,7 @@ abstract class AbstractApi
     }
 
     /**
-     * @param string[] $parameters
+     * @param ParametersType $parameters
      *
      * @return mixed[]
      */
@@ -50,11 +51,6 @@ abstract class AbstractApi
         );
 
         return Json::decode((string) $response->getBody(), true);
-    }
-
-    protected static function createOptionsResolver(): OptionsResolver
-    {
-        return new OptionsResolver();
     }
 
     /**

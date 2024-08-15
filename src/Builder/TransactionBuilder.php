@@ -6,12 +6,7 @@ use IPay\Entity\Transaction;
 use IPay\Enum\TransactionType;
 
 /**
- * @psalm-type ParametersType = array{
- *      accountNumber: string,
- *      tranType?: TransactionType,
- *      startDate?: \DateTimeInterface,
- *      endDate?: \DateTimeInterface,
- * }
+ * @psalm-import-type ParametersType from BodyBuilder
  *
  * @implements \IteratorAggregate<int,Transaction>
  */
@@ -31,8 +26,8 @@ final class TransactionBuilder implements \IteratorAggregate
         \DateTimeInterface $from,
         \DateTimeInterface $to,
     ): self {
-        $this->parameters['startDate'] = $from;
-        $this->parameters['endDate'] = $to;
+        $this->parameters['startDate'] = $from->format('Y-m-d');
+        $this->parameters['endDate'] = $to->format('Y-m-d');
 
         return $this;
     }
@@ -47,7 +42,7 @@ final class TransactionBuilder implements \IteratorAggregate
 
     public function type(TransactionType $type): self
     {
-        $this->parameters['tranType'] = $type;
+        $this->parameters['tranType'] = $type->value;
 
         return $this;
     }

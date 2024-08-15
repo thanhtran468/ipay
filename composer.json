@@ -21,7 +21,6 @@
         "php-http/client-common": "^2.7",
         "nette/utils": "^4.0",
         "eventsauce/object-hydrator": "^1.4",
-        "symfony/options-resolver": "^7.1",
         "symfony/dom-crawler": "^7.1",
         "phpseclib/phpseclib": "^2.0",
         "symfony/var-exporter": "^7.1"

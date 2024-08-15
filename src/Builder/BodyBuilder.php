@@ -6,9 +6,10 @@ use IPay\Encryption\Encrypter;
 use Nette\Utils\Json;
 
 /**
- * @extends \ArrayObject<string,string>
+ * @psalm-type ValueType = string|int
+ * @psalm-type ParametersType = array<string, ValueType>
  *
- * @psalm-type ParametersType = string[]
+ * @extends \ArrayObject<string, ValueType>
  */
 final class BodyBuilder extends \ArrayObject implements \Stringable, \JsonSerializable
 {
@@ -56,7 +57,7 @@ final class BodyBuilder extends \ArrayObject implements \Stringable, \JsonSerial
     }
 
     /**
-     * @return string[]
+     * @return ParametersType
      */
     #[\ReturnTypeWillChange]
     public function jsonSerialize(): array
