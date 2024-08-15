@@ -109,7 +109,7 @@
 		<tr>
 			<th><code>extends</code></th>
 			<td>
-<code><a href="ArrayObject.html"><span title="ArrayObject">ArrayObject</span></a>&lt;string, string&gt;</code>			</td>
+<code><a href="ArrayObject.html"><span title="ArrayObject">ArrayObject</span></a>&lt;string, <a href="IPay.Builder.BodyBuilder.html#~ValueType"><span title="(string | int)">ValueType</span></a>&gt;</code>			</td>
 		</tr>
 		<tr>
 			<th><code>implements</code></th>
@@ -145,7 +145,7 @@
 			</div>
 
 		<div class="classLikeSection">
-			<b>Located at</b> <a href="source-Builder.BodyBuilder.html#13" title="Go to source code">Builder/BodyBuilder.php</a><br>
+			<b>Located at</b> <a href="source-Builder.BodyBuilder.html#14" title="Go to source code">Builder/BodyBuilder.php</a><br>
 		</div>
 
 		<table class="table" id="aliases">
@@ -153,17 +153,34 @@
 				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Type aliases</th>
 			</tr>
 
+	<tr data-order="ValueType" id="~ValueType">
+		<td class="table-cell table-shrink">
+			<code class="nowrap">
+				<a href="source-Builder.BodyBuilder.html#8-13" title="Go to source code">
+					ValueType
+				</a>
+			</code>
+		</td>
+
+		<td class="table-cell">
+			<code class="nowrap">string|int</code>
+		</td>
+
+		<td class="table-anchor">
+			<a href="#~ValueType">#</a>
+		</td>
+	</tr>
 	<tr data-order="ParametersType" id="~ParametersType">
 		<td class="table-cell table-shrink">
 			<code class="nowrap">
-				<a href="source-Builder.BodyBuilder.html#8-12" title="Go to source code">
+				<a href="source-Builder.BodyBuilder.html#8-13" title="Go to source code">
 					ParametersType
 				</a>
 			</code>
 		</td>
 
 		<td class="table-cell">
-			<code class="nowrap">string[]</code>
+			<code class="nowrap">array&lt;string, <a href="IPay.Builder.BodyBuilder.html#~ValueType"><span title="(string | int)">ValueType</span></a>&gt;</code>
 		</td>
 
 		<td class="table-anchor">
@@ -189,7 +206,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builder.BodyBuilder.html#23-29" title="Go to source code">from</a>(<span><a href="IPay.Builder.BodyBuilder.html#~ParametersType"><span title="string[]">ParametersType</span></a> <var>$parameters</var></span>): static</code>
+				<code><a href="source-Builder.BodyBuilder.html#24-30" title="Go to source code">from</a>(<span><a href="IPay.Builder.BodyBuilder.html#~ParametersType"><span title="array&lt;string, ValueType&gt;">ParametersType</span></a> <var>$parameters</var></span>): static</code>
 
 
 
@@ -215,7 +232,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builder.BodyBuilder.html#31-37" title="Go to source code">enhance</a>(<span><a href="IPay.Builder.BodyBuilder.html#~ParametersType"><span title="string[]">ParametersType</span></a> <var>$parameters</var></span>): static</code>
+				<code><a href="source-Builder.BodyBuilder.html#32-38" title="Go to source code">enhance</a>(<span><a href="IPay.Builder.BodyBuilder.html#~ParametersType"><span title="array&lt;string, ValueType&gt;">ParametersType</span></a> <var>$parameters</var></span>): static</code>
 
 
 
@@ -241,7 +258,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builder.BodyBuilder.html#39-46" title="Go to source code">build</a>(): <b><span class="active" title="IPay\Builder\BodyBuilder">self</span></b></code>
+				<code><a href="source-Builder.BodyBuilder.html#40-47" title="Go to source code">build</a>(): <b><span class="active" title="IPay\Builder\BodyBuilder">self</span></b></code>
 
 
 
@@ -267,7 +284,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builder.BodyBuilder.html#48-51" title="Go to source code">encrypt</a>(): string</code>
+				<code><a href="source-Builder.BodyBuilder.html#49-52" title="Go to source code">encrypt</a>(): string</code>
 
 
 
@@ -293,7 +310,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builder.BodyBuilder.html#53-56" title="Go to source code">__toString</a>(): string</code>
+				<code><a href="source-Builder.BodyBuilder.html#54-57" title="Go to source code">__toString</a>(): string</code>
 
 
 
@@ -324,7 +341,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builder.BodyBuilder.html#58-65" title="Go to source code">jsonSerialize</a>(): string[]</code>
+				<code><a href="source-Builder.BodyBuilder.html#59-66" title="Go to source code">jsonSerialize</a>(): <a href="IPay.Builder.BodyBuilder.html#~ParametersType"><span title="array&lt;string, ValueType&gt;">ParametersType</span></a></code>
 
 
 
