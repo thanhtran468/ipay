@@ -1,5 +1,8 @@
 ## IPay Unoffical Client
 
+[![static analysis](https://github.com/thanhtran468/ipay/actions/workflows/static-analysis.yaml/badge.svg)](https://github.com/thanhtran468/ipay/actions/workflows/static-analysis.yaml)
+[![tests](https://github.com/thanhtran468/ipay/actions/workflows/tests.yaml/badge.svg)](https://github.com/thanhtran468/ipay/actions/workflows/tests.yaml)
+
 ```php
 <?php
 
