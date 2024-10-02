@@ -2,21 +2,30 @@
 
 namespace IPay\Entity;
 
-use EventSauce\ObjectHydrator\MapFrom;
+use EventSauce\ObjectHydrator\Constructor;
 
-#[MapFrom([
-    'fullname' => 'name',
-    'phone' => 'phone',
-    'jobTitle' => 'job',
-    'feeAcctNo' => 'accountNumber',
-])]
 readonly class Customer
 {
-    public function __construct(
+    private function __construct(
         public string $name,
         public string $phone,
         public string $job,
         public string $accountNumber,
     ) {
+    }
+
+    #[Constructor]
+    public static function create(
+        string $fullname,
+        string $phone,
+        string $jobTitle,
+        string $feeAcctNo,
+    ): self {
+        return new self(
+            $fullname,
+            $phone,
+            $jobTitle,
+            $feeAcctNo,
+        );
     }
 }

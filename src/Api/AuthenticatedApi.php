@@ -17,7 +17,12 @@ use Symfony\Component\VarExporter\LazyGhostTrait;
  */
 final class AuthenticatedApi extends AbstractApi
 {
-    use LazyGhostTrait;
+    use LazyGhostTrait {
+        createLazyGhost as private;
+        initializeLazyObject as private;
+        isLazyObjectInitialized as private;
+        resetLazyObject as private;
+    }
 
     public Customer $customer;
 
@@ -49,9 +54,9 @@ final class AuthenticatedApi extends AbstractApi
 
     public function transactions(?string $accountNumber = null): TransactionBuilder
     {
-        return new TransactionBuilder(
-            ['accountNumber' => $accountNumber ?? $this->customer->accountNumber],
+        return TransactionBuilder::from(
             $this->getTransactions(...),
+            ['accountNumber' => $accountNumber ?? $this->customer->accountNumber],
         );
     }
 

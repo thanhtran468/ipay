@@ -8,18 +8,34 @@ use IPay\Enum\TransactionType;
 /**
  * @psalm-import-type ParametersType from BodyBuilder
  *
+ * @psalm-type GetterType = \Closure(ParametersType):\Traversable<Transaction>
+ *
  * @implements \IteratorAggregate<int,Transaction>
  */
 final class TransactionBuilder implements \IteratorAggregate
 {
     /**
-     * @param ParametersType                                     $parameters
-     * @param \Closure(ParametersType):\Traversable<Transaction> $getter
+     * @param GetterType     $getter
+     * @param ParametersType $parameters
      */
-    public function __construct(
-        private array $parameters,
+    private function __construct(
         private \Closure $getter,
+        private array $parameters,
     ) {
+    }
+
+    /**
+     * @param GetterType     $getter
+     * @param ParametersType $parameters
+     */
+    public static function from(
+        \Closure $getter,
+        array $parameters,
+    ): self {
+        return new self(
+            $getter,
+            $parameters,
+        );
     }
 
     public function between(
