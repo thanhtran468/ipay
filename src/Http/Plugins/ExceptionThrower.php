@@ -1,11 +1,11 @@
 <?php
 
-namespace IPay\Http\Plugin;
+namespace IPay\Http\Plugins;
 
 use Http\Client\Common\Plugin;
 use Http\Promise\Promise;
-use IPay\Exception\LoginException;
-use IPay\Exception\SessionException;
+use IPay\Exceptions\LoginException;
+use IPay\Exceptions\SessionException;
 use Nette\Utils\Json;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;

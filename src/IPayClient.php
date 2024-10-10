@@ -13,11 +13,11 @@ use Http\Client\Common\Plugin\ContentTypePlugin;
 use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
-use IPay\Builder\BodyBuilder;
-use IPay\Builder\TransactionBuilder;
+use IPay\Builders\BodyBuilder;
+use IPay\Builders\TransactionBuilder;
 use IPay\Captcha\CaptchaSolver;
 use IPay\Contracts\AbstractApi;
-use IPay\Http\Plugin\ExceptionThrower;
+use IPay\Http\Plugins\ExceptionThrower;
 use IPay\ValueObjects\Account;
 use IPay\ValueObjects\Customer;
 use IPay\ValueObjects\Transaction;
@@ -33,7 +33,7 @@ final class IPayClient extends AbstractApi
     use LazyGhostTrait;
 
     /**
-     * @throws Exception\LoginException
+     * @throws Exceptions\LoginException
      */
     public static function fromCredentials(string $username, string $password): AbstractApi
     {
@@ -113,7 +113,7 @@ final class IPayClient extends AbstractApi
      *
      * @return \Traversable<int, Transaction>
      *
-     * @throws Exception\SessionException
+     * @throws Exceptions\SessionException
      */
     private function getTransactions(array $parameters): \Traversable
     {

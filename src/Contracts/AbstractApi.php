@@ -2,7 +2,7 @@
 
 namespace IPay\Contracts;
 
-use IPay\Builder\TransactionBuilder;
+use IPay\Builders\TransactionBuilder;
 use IPay\ValueObjects\Account;
 use IPay\ValueObjects\Customer;
 

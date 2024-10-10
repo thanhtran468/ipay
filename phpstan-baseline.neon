@@ -1,6 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Property IPay\\\\Builder\\\\TransactionBuilder\\:\\:\\$resolver is never written, only read\\.$#"
+			message: "#^Property IPay\\\\Builders\\\\TransactionBuilder\\:\\:\\$resolver is never written, only read\\.$#"
 			count: 1
-			path: src/Builder/TransactionBuilder.php
+			path: src/Builders/TransactionBuilder.php

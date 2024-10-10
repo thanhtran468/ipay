@@ -1,6 +1,6 @@
 <?php
 
-namespace IPay\Builder;
+namespace IPay\Builders;
 
 use IPay\Enum\TransactionType;
 use IPay\ValueObjects\Transaction;
