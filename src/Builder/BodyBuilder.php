@@ -4,64 +4,56 @@ namespace IPay\Builder;
 
 use IPay\Encryption\Encrypter;
 use Nette\Utils\Json;
+use Nette\Utils\Random;
 
 /**
  * @psalm-type ValueType = string|int
  * @psalm-type ParametersType = array<string, ValueType>
- *
- * @extends \ArrayObject<string, ValueType>
  */
-final class BodyBuilder extends \ArrayObject implements \Stringable, \JsonSerializable
+final class BodyBuilder
 {
+    private ?string $sessionId = null;
+
     /**
-     * @param ParametersType $array
+     * @param ParametersType $parameters
      */
-    private function __construct(array $array)
-    {
-        parent::__construct($array);
+    public function __construct(
+        private array $parameters = [],
+    ) {
     }
 
     /**
      * @param ParametersType $parameters
      */
-    public static function from(array $parameters): static
+    public function with(array $parameters): self
     {
-        return new static($parameters);
+        $this->parameters = array_merge($this->parameters, $parameters);
+
+        return $this;
     }
 
-    /**
-     * @param ParametersType $parameters
-     */
-    public function enhance(array $parameters): static
+    public function withSessionId(string $sessionId): self
     {
-        return static::from($this->getArrayCopy() + $parameters);
-    }
-
-    public function build(): self
-    {
-        $this->ksort();
-
-        $this['signature'] = md5(http_build_query($this->getArrayCopy()));
+        $this->sessionId = $sessionId;
 
         return $this;
     }
 
     public function encrypt(): string
     {
-        return static::from(['encrypted' => Encrypter::encrypt($this)]);
-    }
-
-    public function __toString(): string
-    {
-        return Json::encode($this);
-    }
-
-    /**
-     * @return ParametersType
-     */
-    #[\ReturnTypeWillChange]
-    public function jsonSerialize(): array
-    {
-        return $this->getArrayCopy();
+        $data = array_merge($this->parameters, [
+            'lang' => 'en',
+            'requestId' => Random::generate(12, '0-9A-Z').'|'.time(),
+        ]);
+        $this->sessionId && $data['sessionId'] = $this->sessionId;
+        ksort($data);
+        $data['signature'] = md5(http_build_query($data));
+        try {
+            return Json::encode([
+                'encrypted' => Encrypter::encrypt(Json::encode($data)),
+            ]);
+        } finally {
+            $this->parameters = [];
+        }
     }
 }

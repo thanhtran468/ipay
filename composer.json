@@ -4,9 +4,9 @@
     "type": "library",
     "license": "MIT",
     "autoload": {
-        "classmap": [
-            "src"
-        ]
+        "psr-4": {
+            "IPay\\": "src/"
+        }
     },
     "authors": [
         {
