@@ -1,5 +1,6 @@
 {
     "name": "gingdev/ipay",
+    "version": "1.0.0",
     "description": "IPay API",
     "type": "library",
     "license": "MIT",
