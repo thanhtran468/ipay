@@ -4,7 +4,7 @@ namespace IPay\Encryption;
 
 use phpseclib\Crypt\RSA;
 
-final class Encrypter
+final class Encryptor
 {
     private const IPAY_PUBLIC_KEY = <<<PUBLIC
 -----BEGIN PUBLIC KEY-----

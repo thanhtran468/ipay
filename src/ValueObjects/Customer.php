@@ -1,6 +1,6 @@
 <?php
 
-namespace IPay\Entity;
+namespace IPay\ValueObjects;
 
 use EventSauce\ObjectHydrator\Constructor;
 

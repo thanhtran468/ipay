@@ -1,6 +1,6 @@
 <?php
 
-namespace IPay\Exception;
+namespace IPay\Exceptions;
 
 class LoginException extends \Exception
 {

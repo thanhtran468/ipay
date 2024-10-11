@@ -1,42 +1,22 @@
 <?php
 
-namespace IPay\Builder;
+namespace IPay\Builders;
 
-use IPay\Entity\Transaction;
-use IPay\Enum\TransactionType;
+use IPay\Enums\TransactionType;
+use IPay\ValueObjects\Transaction;
 
 /**
  * @psalm-import-type ParametersType from BodyBuilder
- *
- * @psalm-type GetterType = \Closure(ParametersType):\Traversable<Transaction>
  *
  * @implements \IteratorAggregate<int,Transaction>
  */
 final class TransactionBuilder implements \IteratorAggregate
 {
-    /**
-     * @param GetterType     $getter
-     * @param ParametersType $parameters
-     */
-    private function __construct(
-        private \Closure $getter,
-        private array $parameters,
-    ) {
-    }
+    /** @var \Closure(ParametersType):\Traversable<Transaction> */
+    private \Closure $resolver;
 
-    /**
-     * @param GetterType     $getter
-     * @param ParametersType $parameters
-     */
-    public static function from(
-        \Closure $getter,
-        array $parameters,
-    ): self {
-        return new self(
-            $getter,
-            $parameters,
-        );
-    }
+    /** @var ParametersType */
+    private array $parameters = [];
 
     public function between(
         \DateTimeInterface $from,
@@ -65,6 +45,6 @@ final class TransactionBuilder implements \IteratorAggregate
 
     public function getIterator(): \Traversable
     {
-        return ($this->getter)($this->parameters);
+        return ($this->resolver)($this->parameters);
     }
 }

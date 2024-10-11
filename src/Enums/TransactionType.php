@@ -1,6 +1,6 @@
 <?php
 
-namespace IPay\Enum;
+namespace IPay\Enums;
 
 enum TransactionType: string
 {
