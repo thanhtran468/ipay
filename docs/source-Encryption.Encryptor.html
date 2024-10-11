@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>File Encryption/Encryptor.php |  API</title>
+	<link rel="stylesheet" href="assets/main.css">
+	<script src="assets/main.js" defer></script>
+</head>
+
+<body class="layout">
+	<div class="layout-aside">
+	<div class="menu">
+			<div class="menu-section">
+				<h3>Namespaces</h3>
+	<ul>
+			<li class="menuGroup-item active">
+				<a href="namespace-IPay.html">IPay</a>
+	<ul>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Builders.html">Builders</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Captcha.html">Captcha</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Contracts.html">Contracts</a>
+			</li>
+			<li class="menuGroup-item active">
+				<a href="namespace-IPay.Encryption.html">Encryption</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Enums.html">Enums</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Exceptions.html">Exceptions</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.ValueObjects.html">ValueObjects</a>
+			</li>
+	</ul>
+			</li>
+	</ul>
+			</div>
+
+		<div class="menu-section">
+			<h3>Classes</h3>
+			<ul>
+					<li class="active">
+						<a href="IPay.Encryption.Encryptor.html">
+							Encryptor
+						</a>
+					</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<div class="layout-main">
+		<div class="layout-navbar">
+	<nav class="navbar">
+		<div class="navbar-left">
+			<ul class="navbar-links">
+				<li>
+					<a href="index.html">Overview</a>
+				</li>
+				<li>
+					
+						<a href="namespace-IPay.Encryption.html">Namespace</a>
+					
+				</li>
+<li class="active"><a href="IPay.Encryption.Encryptor.html">Class</a></li>				<li>
+					<a href="tree.html">Tree</a>
+				</li>
+			</ul>
+		</div>
+		<div class="navbar-right">
+	<div class="search" data-elements="assets/elements.js">
+		<input class="search-input" placeholder="Search class, function or namespace" autofocus>
+		<ul class="search-results"></ul>
+	</div>
+		</div>
+	</nav>
+		</div>
+
+		<div class="layout-content">
+	<table class="source"><tr id="1" class="source-line"><td><a class="source-lineNum" href="#1"> 1: </a></td><td><span class="php-tag">&lt;?php</span></td></tr><tr id="2" class="source-line"><td><a class="source-lineNum" href="#2"> 2: </a></td><td><span class="php-tag"></span></td></tr><tr id="3" class="source-line"><td><a class="source-lineNum" href="#3"> 3: </a></td><td><span class="php-kw">namespace</span> IPay\Encryption;</td></tr><tr id="4" class="source-line"><td><a class="source-lineNum" href="#4"> 4: </a></td><td></td></tr><tr id="5" class="source-line"><td><a class="source-lineNum" href="#5"> 5: </a></td><td><span class="php-kw">use</span> phpseclib\Crypt\RSA;</td></tr><tr id="6" class="source-line"><td><a class="source-lineNum" href="#6"> 6: </a></td><td></td></tr><tr id="7" class="source-line"><td><a class="source-lineNum" href="#7"> 7: </a></td><td><span class="php-kw">final</span> <span class="php-kw">class</span> Encryptor</td></tr><tr id="8" class="source-line"><td><a class="source-lineNum" href="#8"> 8: </a></td><td>{</td></tr><tr id="9" class="source-line"><td><a class="source-lineNum" href="#9"> 9: </a></td><td>    <span class="php-kw">private</span> <span class="php-kw">const</span> IPAY_PUBLIC_KEY = &lt;&lt;&lt;PUBLIC</td></tr><tr id="10" class="source-line"><td><a class="source-lineNum" href="#10">10: </a></td><td><span class="php-str">-----BEGIN PUBLIC KEY-----</span></td></tr><tr id="11" class="source-line"><td><a class="source-lineNum" href="#11">11: </a></td><td><span class="php-str">MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDLenQHmHpaqYX4IrRVM8H1uB21</span></td></tr><tr id="12" class="source-line"><td><a class="source-lineNum" href="#12">12: </a></td><td><span class="php-str">xWuY+clsvn79pMUYR2KwIEfeHcnZFFshjDs3D2ae4KprjkOFZPYzEWzakg2nOIUV</span></td></tr><tr id="13" class="source-line"><td><a class="source-lineNum" href="#13">13: </a></td><td><span class="php-str">WO+Q6RlAU1+1fxgTvEXi4z7yi+n0Zs0puOycrm8i67jsQfHi+HgdMxCaKzHvbECr</span></td></tr><tr id="14" class="source-line"><td><a class="source-lineNum" href="#14">14: </a></td><td><span class="php-str">+JWnLxnEl6615hEeMQIDAQAB</span></td></tr><tr id="15" class="source-line"><td><a class="source-lineNum" href="#15">15: </a></td><td><span class="php-str">-----END PUBLIC KEY-----</span></td></tr><tr id="16" class="source-line"><td><a class="source-lineNum" href="#16">16: </a></td><td><span class="php-str"></span>PUBLIC;</td></tr><tr id="17" class="source-line"><td><a class="source-lineNum" href="#17">17: </a></td><td></td></tr><tr id="18" class="source-line"><td><a class="source-lineNum" href="#18">18: </a></td><td>    <span class="php-kw">public</span> <span class="php-kw">static</span> <span class="php-kw">function</span> encrypt(string <span class="php-var">$message</span>): string</td></tr><tr id="19" class="source-line"><td><a class="source-lineNum" href="#19">19: </a></td><td>    {</td></tr><tr id="20" class="source-line"><td><a class="source-lineNum" href="#20">20: </a></td><td>        <span class="php-var">$rsa</span> = <span class="php-kw">new</span> RSA();</td></tr><tr id="21" class="source-line"><td><a class="source-lineNum" href="#21">21: </a></td><td>        <span class="php-var">$rsa</span>-&gt;loadKey(<span class="php-kw">static</span>::IPAY_PUBLIC_KEY);</td></tr><tr id="22" class="source-line"><td><a class="source-lineNum" href="#22">22: </a></td><td></td></tr><tr id="23" class="source-line"><td><a class="source-lineNum" href="#23">23: </a></td><td>        <span class="php-kw">return</span> base64_encode(<span class="php-var">$rsa</span>-&gt;encrypt(<span class="php-var">$message</span>));</td></tr><tr id="24" class="source-line"><td><a class="source-lineNum" href="#24">24: </a></td><td>    }</td></tr><tr id="25" class="source-line"><td><a class="source-lineNum" href="#25">25: </a></td><td>}</td></tr><tr id="26" class="source-line"><td><a class="source-lineNum" href="#26">26: </a></td><td></td></tr></table>
+		</div>
+
+		<div class="layout-footer">
+			 API documentation generated by <a href="https://www.apigen.org">ApiGen v7.0.0-alpha.6</a>
+		</div>
+	</div>
+
+	<div class="layout-rest">
+		<div class="navbar"></div>
+	</div>
+</body>
+</html>

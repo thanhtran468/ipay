@@ -5,52 +5,44 @@
 		<url><loc>tree.html</loc></url>
 
 			<url><loc>namespace-IPay.html</loc></url>
-			<url><loc>namespace-IPay.Api.html</loc></url>
-			<url><loc>namespace-IPay.Builder.html</loc></url>
+			<url><loc>namespace-IPay.Builders.html</loc></url>
 			<url><loc>namespace-IPay.Captcha.html</loc></url>
+			<url><loc>namespace-IPay.Contracts.html</loc></url>
 			<url><loc>namespace-IPay.Encryption.html</loc></url>
-			<url><loc>namespace-IPay.Entity.html</loc></url>
-			<url><loc>namespace-IPay.Enum.html</loc></url>
-			<url><loc>namespace-IPay.Exception.html</loc></url>
+			<url><loc>namespace-IPay.Enums.html</loc></url>
+			<url><loc>namespace-IPay.Exceptions.html</loc></url>
 			<url><loc>namespace-IPay.Http.html</loc></url>
-			<url><loc>namespace-IPay.Http.Plugin.html</loc></url>
-			<url><loc>namespace-IPay.Session.html</loc></url>
+			<url><loc>namespace-IPay.Http.Plugins.html</loc></url>
+			<url><loc>namespace-IPay.ValueObjects.html</loc></url>
 
-			<url><loc>IPay.Api.AbstractApi.html</loc></url>
-			<url><loc>IPay.Api.AuthenticatedApi.html</loc></url>
-			<url><loc>IPay.Builder.BodyBuilder.html</loc></url>
-			<url><loc>IPay.Builder.TransactionBuilder.html</loc></url>
+			<url><loc>IPay.Builders.BodyBuilder.html</loc></url>
+			<url><loc>IPay.Builders.TransactionBuilder.html</loc></url>
 			<url><loc>IPay.Captcha.CaptchaSolver.html</loc></url>
-			<url><loc>IPay.Encryption.Encrypter.html</loc></url>
-			<url><loc>IPay.Entity.Account.html</loc></url>
-			<url><loc>IPay.Entity.AccountState.html</loc></url>
-			<url><loc>IPay.Entity.Customer.html</loc></url>
-			<url><loc>IPay.Entity.Transaction.html</loc></url>
-			<url><loc>IPay.Enum.TransactionType.html</loc></url>
-			<url><loc>IPay.Exception.LoginException.html</loc></url>
-			<url><loc>IPay.Exception.SessionException.html</loc></url>
-			<url><loc>IPay.Http.Plugin.ExceptionThrower.html</loc></url>
+			<url><loc>IPay.Contracts.AbstractApi.html</loc></url>
+			<url><loc>IPay.Encryption.Encryptor.html</loc></url>
+			<url><loc>IPay.Enums.TransactionType.html</loc></url>
+			<url><loc>IPay.Exceptions.LoginException.html</loc></url>
+			<url><loc>IPay.Exceptions.SessionException.html</loc></url>
+			<url><loc>IPay.Http.Plugins.ExceptionThrower.html</loc></url>
 			<url><loc>IPay.IPayClient.html</loc></url>
-			<url><loc>IPay.Session.AuthenticatedSession.html</loc></url>
-			<url><loc>IPay.Session.SessionInterface.html</loc></url>
-			<url><loc>IPay.Session.UnauthenticatedSession.html</loc></url>
+			<url><loc>IPay.ValueObjects.Account.html</loc></url>
+			<url><loc>IPay.ValueObjects.AccountState.html</loc></url>
+			<url><loc>IPay.ValueObjects.Customer.html</loc></url>
+			<url><loc>IPay.ValueObjects.Transaction.html</loc></url>
 
 
-			<url><loc>source-Api.AbstractApi.html</loc></url>
-			<url><loc>source-Api.AuthenticatedApi.html</loc></url>
-			<url><loc>source-Builder.BodyBuilder.html</loc></url>
-			<url><loc>source-Builder.TransactionBuilder.html</loc></url>
+			<url><loc>source-Builders.BodyBuilder.html</loc></url>
+			<url><loc>source-Builders.TransactionBuilder.html</loc></url>
 			<url><loc>source-Captcha.CaptchaSolver.html</loc></url>
-			<url><loc>source-Encryption.Encrypter.html</loc></url>
-			<url><loc>source-Entity.Account.html</loc></url>
-			<url><loc>source-Entity.Customer.html</loc></url>
-			<url><loc>source-Entity.Transaction.html</loc></url>
-			<url><loc>source-Enum.TransactionType.html</loc></url>
-			<url><loc>source-Exception.LoginException.html</loc></url>
-			<url><loc>source-Exception.SessionException.html</loc></url>
-			<url><loc>source-Http.Plugin.ExceptionThrower.html</loc></url>
+			<url><loc>source-Contracts.AbstractApi.html</loc></url>
+			<url><loc>source-Encryption.Encryptor.html</loc></url>
+			<url><loc>source-Enums.TransactionType.html</loc></url>
+			<url><loc>source-Exceptions.LoginException.html</loc></url>
+			<url><loc>source-Exceptions.SessionException.html</loc></url>
+			<url><loc>source-Http.Plugins.ExceptionThrower.html</loc></url>
 			<url><loc>source-IPayClient.html</loc></url>
-			<url><loc>source-Session.AuthenticatedSession.html</loc></url>
-			<url><loc>source-Session.SessionInterface.html</loc></url>
-			<url><loc>source-Session.UnauthenticatedSession.html</loc></url>
+			<url><loc>source-ValueObjects.Account.html</loc></url>
+			<url><loc>source-ValueObjects.AccountState.html</loc></url>
+			<url><loc>source-ValueObjects.Customer.html</loc></url>
+			<url><loc>source-ValueObjects.Transaction.html</loc></url>
 </urlset>

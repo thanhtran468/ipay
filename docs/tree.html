@@ -20,31 +20,28 @@
 				<a href="namespace-IPay.html">IPay</a>
 	<ul>
 			<li class="menuGroup-item">
-				<a href="namespace-IPay.Api.html">Api</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-IPay.Builder.html">Builder</a>
+				<a href="namespace-IPay.Builders.html">Builders</a>
 			</li>
 			<li class="menuGroup-item">
 				<a href="namespace-IPay.Captcha.html">Captcha</a>
 			</li>
 			<li class="menuGroup-item">
+				<a href="namespace-IPay.Contracts.html">Contracts</a>
+			</li>
+			<li class="menuGroup-item">
 				<a href="namespace-IPay.Encryption.html">Encryption</a>
 			</li>
 			<li class="menuGroup-item">
-				<a href="namespace-IPay.Entity.html">Entity</a>
+				<a href="namespace-IPay.Enums.html">Enums</a>
 			</li>
 			<li class="menuGroup-item">
-				<a href="namespace-IPay.Enum.html">Enum</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-IPay.Exception.html">Exception</a>
+				<a href="namespace-IPay.Exceptions.html">Exceptions</a>
 			</li>
 			<li class="menuGroup-item">
 				<a href="namespace-IPay.Http.html">Http</a>
 			</li>
 			<li class="menuGroup-item">
-				<a href="namespace-IPay.Session.html">Session</a>
+				<a href="namespace-IPay.ValueObjects.html">ValueObjects</a>
 			</li>
 	</ul>
 			</li>
@@ -87,36 +84,6 @@
 			<h3>Classes</h3>
 	<ul class="classTree">
 	<li>
-<a href="ArrayIterator.html"><span>ArrayIterator</span></a>
-
-		implements
-			<a href="SeekableIterator.html"><span title="SeekableIterator">SeekableIterator</span></a>, 
-			<a href="ArrayAccess.html"><span title="ArrayAccess">ArrayAccess</span></a>, 
-			<a href="Serializable.html"><span title="Serializable">Serializable</span></a>, 
-			<a href="Countable.html"><span title="Countable">Countable</span></a>
-
-	</li>
-	<li>
-<a href="ArrayObject.html"><span>ArrayObject</span></a>
-
-		implements
-			<a href="IteratorAggregate.html"><span title="IteratorAggregate">IteratorAggregate</span></a>, 
-			<a href="ArrayAccess.html"><span title="ArrayAccess">ArrayAccess</span></a>, 
-			<a href="Serializable.html"><span title="Serializable">Serializable</span></a>, 
-			<a href="Countable.html"><span title="Countable">Countable</span></a>
-
-	<ul class="classTree">
-	<li>
-<a href="IPay.Builder.BodyBuilder.html"><span>IPay\Builder\BodyBuilder</span></a>
-
-		implements
-			<a href="Stringable.html"><span title="Stringable">Stringable</span></a>, 
-			<a href="JsonSerializable.html"><span title="JsonSerializable">JsonSerializable</span></a>
-
-	</li>
-	</ul>
-	</li>
-	<li>
 <a href="Closure.html"><span>Closure</span></a>
 
 
@@ -146,13 +113,6 @@
 
 	</li>
 	<li>
-<a href="EventSauce.ObjectHydrator.IterableList.html"><span>EventSauce\ObjectHydrator\IterableList</span></a>
-
-		implements
-			<a href="IteratorAggregate.html"><span title="IteratorAggregate">IteratorAggregate</span></a>
-
-	</li>
-	<li>
 <a href="Exception.html"><span>Exception</span></a>
 
 		implements
@@ -160,12 +120,12 @@
 
 	<ul class="classTree">
 	<li>
-<a href="IPay.Exception.LoginException.html"><span>IPay\Exception\LoginException</span></a>
+<a href="IPay.Exceptions.LoginException.html"><span>IPay\Exceptions\LoginException</span></a>
 
 
 	</li>
 	<li>
-<a href="IPay.Exception.SessionException.html"><span>IPay\Exception\SessionException</span></a>
+<a href="IPay.Exceptions.SessionException.html"><span>IPay\Exceptions\SessionException</span></a>
 
 
 	</li>
@@ -185,45 +145,22 @@
 <a href="RuntimeException.html"><span>RuntimeException</span></a>
 
 
-	<ul class="classTree">
-	<li>
-<a href="EventSauce.ObjectHydrator.UnableToHydrateObject.html"><span>EventSauce\ObjectHydrator\UnableToHydrateObject</span></a>
-
-
-	</li>
-	<li>
-<a href="EventSauce.ObjectHydrator.UnableToSerializeObject.html"><span>EventSauce\ObjectHydrator\UnableToSerializeObject</span></a>
-
-
-	</li>
-	</ul>
 	</li>
 	</ul>
 	</li>
 	<li>
-<a href="IPay.Api.AbstractApi.html"><span>IPay\Api\AbstractApi</span></a>
-
-
-	<ul class="classTree">
-	<li>
-<a href="IPay.Api.AuthenticatedApi.html"><span>IPay\Api\AuthenticatedApi</span></a>
-
-
-		uses
-			<a href="Symfony.Component.VarExporter.LazyGhostTrait.html"><span title="Symfony\Component\VarExporter\LazyGhostTrait">LazyGhostTrait</span></a>
-	</li>
-	<li>
-<a href="IPay.Api.UnauthenticatedApi.html"><span>IPay\Api\UnauthenticatedApi</span></a>
-
-
-	</li>
-	</ul>
-	</li>
-	<li>
-<a href="IPay.Builder.TransactionBuilder.html"><span>IPay\Builder\TransactionBuilder</span></a>
+<a href="IPay.Builders.BodyBuilder.html"><span>IPay\Builders\BodyBuilder</span></a>
 
 		implements
-			<a href="IteratorAggregate.html"><span title="IteratorAggregate">IteratorAggregate</span></a>&lt;int, <a href="IPay.Entity.Transaction.html"><span title="IPay\Entity\Transaction">Transaction</span></a>&gt;
+			<a href="Stringable.html"><span title="Stringable">Stringable</span></a>, 
+			<a href="JsonSerializable.html"><span title="JsonSerializable">JsonSerializable</span></a>
+
+	</li>
+	<li>
+<a href="IPay.Builders.TransactionBuilder.html"><span>IPay\Builders\TransactionBuilder</span></a>
+
+		implements
+			<a href="IteratorAggregate.html"><span title="IteratorAggregate">IteratorAggregate</span></a>&lt;int, <a href="IPay.ValueObjects.Transaction.html"><span title="IPay\ValueObjects\Transaction">Transaction</span></a>&gt;
 
 	</li>
 	<li>
@@ -232,74 +169,59 @@
 
 	</li>
 	<li>
-<a href="IPay.Encryption.Encrypter.html"><span>IPay\Encryption\Encrypter</span></a>
+<a href="IPay.Contracts.AbstractApi.html"><span>IPay\Contracts\AbstractApi</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<a href="IPay.IPayClient.html"><span>IPay\IPayClient</span></a>
+
+
+		uses
+			<a href="Symfony.Component.VarExporter.LazyGhostTrait.html"><span title="Symfony\Component\VarExporter\LazyGhostTrait">LazyGhostTrait</span></a>
+	</li>
+	</ul>
+	</li>
+	<li>
+<a href="IPay.Encryption.Encryptor.html"><span>IPay\Encryption\Encryptor</span></a>
 
 
 	</li>
 	<li>
-<a href="IPay.Entity.Account.html"><span>IPay\Entity\Account</span></a>
-
-
-	</li>
-	<li>
-<a href="IPay.Entity.AccountState.html"><span>IPay\Entity\AccountState</span></a>
-
-
-	</li>
-	<li>
-<a href="IPay.Entity.Customer.html"><span>IPay\Entity\Customer</span></a>
-
-
-	</li>
-	<li>
-<a href="IPay.Entity.Transaction.html"><span>IPay\Entity\Transaction</span></a>
-
-
-	</li>
-	<li>
-<a href="IPay.Http.Plugin.ExceptionThrower.html"><span>IPay\Http\Plugin\ExceptionThrower</span></a>
+<a href="IPay.Http.Plugins.ExceptionThrower.html"><span>IPay\Http\Plugins\ExceptionThrower</span></a>
 
 		implements
 			<a href="Http.Client.Common.Plugin.html"><span title="Http\Client\Common\Plugin">Plugin</span></a>
 
 	</li>
 	<li>
-<a href="IPay.IPayClient.html"><span>IPay\IPayClient</span></a>
+<a href="IPay.ValueObjects.Account.html"><span>IPay\ValueObjects\Account</span></a>
 
 
 	</li>
 	<li>
-<a href="IPay.Session.UnauthenticatedSession.html"><span>IPay\Session\UnauthenticatedSession</span></a>
-
-		implements
-			<a href="IPay.Session.SessionInterface.html"><span title="IPay\Session\SessionInterface">SessionInterface</span></a>
-
-	<ul class="classTree">
-	<li>
-<a href="IPay.Session.AuthenticatedSession.html"><span>IPay\Session\AuthenticatedSession</span></a>
+<a href="IPay.ValueObjects.AccountState.html"><span>IPay\ValueObjects\AccountState</span></a>
 
 
 	</li>
-	</ul>
+	<li>
+<a href="IPay.ValueObjects.Customer.html"><span>IPay\ValueObjects\Customer</span></a>
+
+
+	</li>
+	<li>
+<a href="IPay.ValueObjects.Transaction.html"><span>IPay\ValueObjects\Transaction</span></a>
+
+
 	</li>
 	</ul>
 
 			<h3>Interfaces</h3>
 	<ul class="classTree">
 	<li>
-<a href="ArrayAccess.html"><span>ArrayAccess</span></a>
-
-
-	</li>
-	<li>
 <a href="BackedEnum.html"><span>BackedEnum</span></a>
 		extends
 			<a href="UnitEnum.html"><span title="UnitEnum">UnitEnum</span></a>
-
-
-	</li>
-	<li>
-<a href="Countable.html"><span>Countable</span></a>
 
 
 	</li>
@@ -309,50 +231,12 @@
 
 	</li>
 	<li>
-<a href="EventSauce.ObjectHydrator.ObjectMapper.html"><span>EventSauce\ObjectHydrator\ObjectMapper</span></a>
-
-
-	</li>
-	<li>
-<a href="Http.Client.Common.HttpMethodsClientInterface.html"><span>Http\Client\Common\HttpMethodsClientInterface</span></a>
-		extends
-			<a href="Http.Client.HttpClient.html"><span class="deprecated" title="Http\Client\HttpClient">HttpClient</span></a>
-
-
-	</li>
-	<li>
 <a href="Http.Client.Common.Plugin.html"><span>Http\Client\Common\Plugin</span></a>
 
 
 	</li>
 	<li>
-<a href="Http.Client.Exception.html"><span>Http\Client\Exception</span></a>
-		extends
-			<a href="Psr.Http.Client.ClientExceptionInterface.html"><span title="Psr\Http\Client\ClientExceptionInterface">ClientExceptionInterface</span></a>
-
-
-	</li>
-	<li>
-<a href="Http.Client.HttpClient.html"><span class="deprecated">Http\Client\HttpClient</span></a>
-		extends
-			<a href="Psr.Http.Client.ClientInterface.html"><span title="Psr\Http\Client\ClientInterface">ClientInterface</span></a>
-
-
-	</li>
-	<li>
 <a href="Http.Promise.Promise.html"><span>Http\Promise\Promise</span></a>
-
-
-	</li>
-	<li>
-<a href="IPay.Session.SessionInterface.html"><span>IPay\Session\SessionInterface</span></a>
-
-
-	</li>
-	<li>
-<a href="Iterator.html"><span>Iterator</span></a>
-		extends
-			<a href="Traversable.html"><span title="Traversable">Traversable</span></a>
 
 
 	</li>
@@ -369,18 +253,6 @@
 
 	</li>
 	<li>
-<a href="Psr.Http.Client.ClientExceptionInterface.html"><span>Psr\Http\Client\ClientExceptionInterface</span></a>
-		extends
-			<a href="Throwable.html"><span title="Throwable">Throwable</span></a>
-
-
-	</li>
-	<li>
-<a href="Psr.Http.Client.ClientInterface.html"><span>Psr\Http\Client\ClientInterface</span></a>
-
-
-	</li>
-	<li>
 <a href="Psr.Http.Message.MessageInterface.html"><span>Psr\Http\Message\MessageInterface</span></a>
 
 
@@ -393,31 +265,12 @@
 
 	</li>
 	<li>
-<a href="Psr.Http.Message.ResponseInterface.html"><span>Psr\Http\Message\ResponseInterface</span></a>
-		extends
-			<a href="Psr.Http.Message.MessageInterface.html"><span title="Psr\Http\Message\MessageInterface">MessageInterface</span></a>
-
-
-	</li>
-	<li>
 <a href="Psr.Http.Message.StreamInterface.html"><span>Psr\Http\Message\StreamInterface</span></a>
 
 
 	</li>
 	<li>
 <a href="Psr.Http.Message.UriInterface.html"><span>Psr\Http\Message\UriInterface</span></a>
-
-
-	</li>
-	<li>
-<a href="SeekableIterator.html"><span>SeekableIterator</span></a>
-		extends
-			<a href="Iterator.html"><span title="Iterator">Iterator</span></a>
-
-
-	</li>
-	<li>
-<a href="Serializable.html"><span>Serializable</span></a>
 
 
 	</li>
@@ -457,7 +310,7 @@
 			<h3>Enums</h3>
 	<ul class="classTree">
 	<li>
-<a href="IPay.Enum.TransactionType.html"><span>IPay\Enum\TransactionType</span></a>
+<a href="IPay.Enums.TransactionType.html"><span>IPay\Enums\TransactionType</span></a>
 
 		implements
 			<a href="BackedEnum.html"><span title="BackedEnum">BackedEnum</span></a>

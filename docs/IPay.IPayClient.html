@@ -20,31 +20,28 @@
 				<a href="namespace-IPay.html">IPay</a>
 	<ul>
 			<li class="menuGroup-item">
-				<a href="namespace-IPay.Api.html">Api</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-IPay.Builder.html">Builder</a>
+				<a href="namespace-IPay.Builders.html">Builders</a>
 			</li>
 			<li class="menuGroup-item">
 				<a href="namespace-IPay.Captcha.html">Captcha</a>
 			</li>
 			<li class="menuGroup-item">
+				<a href="namespace-IPay.Contracts.html">Contracts</a>
+			</li>
+			<li class="menuGroup-item">
 				<a href="namespace-IPay.Encryption.html">Encryption</a>
 			</li>
 			<li class="menuGroup-item">
-				<a href="namespace-IPay.Entity.html">Entity</a>
+				<a href="namespace-IPay.Enums.html">Enums</a>
 			</li>
 			<li class="menuGroup-item">
-				<a href="namespace-IPay.Enum.html">Enum</a>
-			</li>
-			<li class="menuGroup-item">
-				<a href="namespace-IPay.Exception.html">Exception</a>
+				<a href="namespace-IPay.Exceptions.html">Exceptions</a>
 			</li>
 			<li class="menuGroup-item">
 				<a href="namespace-IPay.Http.html">Http</a>
 			</li>
 			<li class="menuGroup-item">
-				<a href="namespace-IPay.Session.html">Session</a>
+				<a href="namespace-IPay.ValueObjects.html">ValueObjects</a>
 			</li>
 	</ul>
 			</li>
@@ -101,12 +98,40 @@
 
 			<tr><th><code>final</code></th></tr>
 
+		<tr>
+			<th><code>extends</code></th>
+			<td>
+<code><a href="IPay.Contracts.AbstractApi.html"><span title="IPay\Contracts\AbstractApi">AbstractApi</span></a></code>			</td>
+		</tr>
+		<tr>
+			<th><code>uses</code></th>
+			<td>
+<code><a href="Symfony.Component.VarExporter.LazyGhostTrait.html"><span title="Symfony\Component\VarExporter\LazyGhostTrait">LazyGhostTrait</span></a></code>			</td>
+		</tr>
 
 	</table>
 
+			<div class="classLikeSection">
+	<ul class="classTree">
+	<li>
+<a href="IPay.Contracts.AbstractApi.html"><span>IPay\Contracts\AbstractApi</span></a>
+
+
+	<ul class="classTree">
+	<li>
+<b><span class="active">IPay\IPayClient</span></b>
+
+
+		uses
+			<a href="Symfony.Component.VarExporter.LazyGhostTrait.html"><span title="Symfony\Component\VarExporter\LazyGhostTrait">LazyGhostTrait</span></a>
+	</li>
+	</ul>
+	</li>
+	</ul>
+			</div>
 
 		<div class="classLikeSection">
-			<b>Located at</b> <a href="source-IPayClient.html#17" title="Go to source code">IPayClient.php</a><br>
+			<b>Located at</b> <a href="source-IPayClient.html#31" title="Go to source code">IPayClient.php</a><br>
 		</div>
 
 
@@ -127,7 +152,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-IPayClient.html#19-41" title="Go to source code">fromCredentials</a>(<span>string <var>$username</var></span>, <span>string <var>$password</var></span>): <a href="IPay.Api.AuthenticatedApi.html"><span title="IPay\Api\AuthenticatedApi">AuthenticatedApi</span></a></code>
+				<code><a href="source-IPayClient.html#35-56" title="Go to source code">fromCredentials</a>(<span>string <var>$username</var></span>, <span>string <var>$password</var></span>): <a href="IPay.Contracts.AbstractApi.html"><span title="IPay\Contracts\AbstractApi">AbstractApi</span></a></code>
 
 
 
@@ -138,7 +163,7 @@
 							<h4>Throws</h4>
 							<table>
 									<tr>
-										<td><code><a href="IPay.Exception.LoginException.html"><span>IPay\Exception\LoginException</span></a></code>&nbsp;</td>
+										<td><code><a href="IPay.Exceptions.LoginException.html"><span>IPay\Exceptions\LoginException</span></a></code>&nbsp;</td>
 										<td></td>
 									</tr>
 							</table>
@@ -149,7 +174,7 @@
 			<a href="#_fromCredentials">#</a>
 		</td>
 	</tr>
-	<tr class="expandable collapsed" data-order="getClient" id="_getClient">
+	<tr class="expandable collapsed" data-order="transactions" id="_transactions">
 			<td class="table-cell table-shrink">
 				<code class="nowrap">
 					
@@ -160,7 +185,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-IPayClient.html#48-51" title="Go to source code">getClient</a>(): <a href="Http.Client.Common.HttpMethodsClientInterface.html"><span title="Http\Client\Common\HttpMethodsClientInterface">HttpMethodsClientInterface</span></a></code>
+				<code><a href="source-IPayClient.html#93-109" title="Go to source code">transactions</a>(<span>?string <var>$accountNumber</var> = <span class="php-kw">null</span></span>): <a href="IPay.Builders.TransactionBuilder.html"><span title="IPay\Builders\TransactionBuilder">TransactionBuilder</span></a></code>
 
 
 
@@ -169,14 +194,50 @@
 
 
 
+		<h4>Implements</h4>
+		<ul>
+				<li>
+<a href="IPay.Contracts.AbstractApi.html#_transactions">						<code>IPay\Contracts\AbstractApi::transactions()</code></a>				</li>
+		</ul>
 	</div>
 			</td>
 		<td class="table-anchor">
-			<a href="#_getClient">#</a>
+			<a href="#_transactions">#</a>
 		</td>
 	</tr>
 		</table>
 
+
+
+
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Methods used from <a href="Symfony.Component.VarExporter.LazyGhostTrait.html"><span>Symfony\Component\VarExporter\LazyGhostTrait</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><a href="Symfony.Component.VarExporter.LazyGhostTrait.html#_createLazyGhost">createLazyGhost()</a>, <a href="Symfony.Component.VarExporter.LazyGhostTrait.html#_isLazyObjectInitialized">isLazyObjectInitialized()</a>, <a href="Symfony.Component.VarExporter.LazyGhostTrait.html#_initializeLazyObject">initializeLazyObject()</a>, <a href="Symfony.Component.VarExporter.LazyGhostTrait.html#_resetLazyObject">resetLazyObject()</a>, <a href="Symfony.Component.VarExporter.LazyGhostTrait.html#___get">__get()</a>, <a href="Symfony.Component.VarExporter.LazyGhostTrait.html#___set">__set()</a>, <a href="Symfony.Component.VarExporter.LazyGhostTrait.html#___isset">__isset()</a>, <a href="Symfony.Component.VarExporter.LazyGhostTrait.html#___unset">__unset()</a>, <a href="Symfony.Component.VarExporter.LazyGhostTrait.html#___clone">__clone()</a>, <a href="Symfony.Component.VarExporter.LazyGhostTrait.html#___serialize">__serialize()</a>, <a href="Symfony.Component.VarExporter.LazyGhostTrait.html#___destruct">__destruct()</a></code>				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+
+
+
+		<table class="table">
+			<tr>
+				<th class="table-heading">Properties inherited from <a href="IPay.Contracts.AbstractApi.html"><span>IPay\Contracts\AbstractApi</span></a></th>
+			</tr>
+			<tr>
+				<td class="table-cell">
+<code><var><a href="IPay.Contracts.AbstractApi.html#$customer">$customer</a></var>, <var><a href="IPay.Contracts.AbstractApi.html#$accounts">$accounts</a></var></code>				</td>
+			</tr>
+		</table>
 
 
 
