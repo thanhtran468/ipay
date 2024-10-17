@@ -15,7 +15,7 @@
 			<url><loc>namespace-IPay.Http.Plugins.html</loc></url>
 			<url><loc>namespace-IPay.ValueObjects.html</loc></url>
 
-			<url><loc>IPay.Builders.BodyBuilder.html</loc></url>
+			<url><loc>IPay.Builders.RequestBodyBuilder.html</loc></url>
 			<url><loc>IPay.Builders.TransactionBuilder.html</loc></url>
 			<url><loc>IPay.Captcha.CaptchaSolver.html</loc></url>
 			<url><loc>IPay.Contracts.AbstractApi.html</loc></url>
@@ -31,7 +31,7 @@
 			<url><loc>IPay.ValueObjects.Transaction.html</loc></url>
 
 
-			<url><loc>source-Builders.BodyBuilder.html</loc></url>
+			<url><loc>source-Builders.RequestBodyBuilder.html</loc></url>
 			<url><loc>source-Builders.TransactionBuilder.html</loc></url>
 			<url><loc>source-Captcha.CaptchaSolver.html</loc></url>
 			<url><loc>source-Contracts.AbstractApi.html</loc></url>

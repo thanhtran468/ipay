@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 
-	<title>Class IPay\Builders\BodyBuilder |  API</title>
+	<title>Class IPay\Builders\RequestBodyBuilder |  API</title>
 	<link rel="stylesheet" href="assets/main.css">
 	<script src="assets/main.js" defer></script>
 </head>
@@ -52,8 +52,8 @@
 			<h3>Classes</h3>
 			<ul>
 					<li class="active">
-						<a href="IPay.Builders.BodyBuilder.html">
-							BodyBuilder
+						<a href="IPay.Builders.RequestBodyBuilder.html">
+							RequestBodyBuilder
 						</a>
 					</li>
 					<li>
@@ -79,7 +79,7 @@
 						<a href="namespace-IPay.Builders.html">Namespace</a>
 					
 				</li>
-<li class="active"><a href="IPay.Builders.BodyBuilder.html">Class</a></li>				<li>
+<li class="active"><a href="IPay.Builders.RequestBodyBuilder.html">Class</a></li>				<li>
 					<a href="tree.html">Tree</a>
 				</li>
 			</ul>
@@ -95,7 +95,7 @@
 
 		<div class="layout-content">
 		<h1>
-			Class <a href="namespace-IPay.html">IPay</a>\<a href="namespace-IPay.Builders.html">Builders</a>\<a href="IPay.Builders.BodyBuilder.html">BodyBuilder</a>
+			Class <a href="namespace-IPay.html">IPay</a>\<a href="namespace-IPay.Builders.html">Builders</a>\<a href="IPay.Builders.RequestBodyBuilder.html">RequestBodyBuilder</a>
 		</h1>
 
 
@@ -113,7 +113,7 @@
 
 
 		<div class="classLikeSection">
-			<b>Located at</b> <a href="source-Builders.BodyBuilder.html#13" title="Go to source code">Builders/BodyBuilder.php</a><br>
+			<b>Located at</b> <a href="source-Builders.RequestBodyBuilder.html#12" title="Go to source code">Builders/RequestBodyBuilder.php</a><br>
 		</div>
 
 		<table class="table" id="aliases">
@@ -124,7 +124,7 @@
 	<tr data-order="ValueType" id="~ValueType">
 		<td class="table-cell table-shrink">
 			<code class="nowrap">
-				<a href="source-Builders.BodyBuilder.html#9-12" title="Go to source code">
+				<a href="source-Builders.RequestBodyBuilder.html#8-11" title="Go to source code">
 					ValueType
 				</a>
 			</code>
@@ -141,14 +141,14 @@
 	<tr data-order="ParametersType" id="~ParametersType">
 		<td class="table-cell table-shrink">
 			<code class="nowrap">
-				<a href="source-Builders.BodyBuilder.html#9-12" title="Go to source code">
+				<a href="source-Builders.RequestBodyBuilder.html#8-11" title="Go to source code">
 					ParametersType
 				</a>
 			</code>
 		</td>
 
 		<td class="table-cell">
-			<code class="nowrap">array&lt;string, <a href="IPay.Builders.BodyBuilder.html#~ValueType"><span title="(string | int)">ValueType</span></a>&gt;</code>
+			<code class="nowrap">array&lt;string, <a href="IPay.Builders.RequestBodyBuilder.html#~ValueType"><span title="(string | int)">ValueType</span></a>&gt;</code>
 		</td>
 
 		<td class="table-anchor">
@@ -163,18 +163,18 @@
 				<th class="table-heading sortable" colspan="3" title="Switch between natural and alphabetical order">Methods</th>
 			</tr>
 
-	<tr class="expandable collapsed" data-order="__construct" id="___construct">
+	<tr class="expandable collapsed" data-order="new" id="_new">
 			<td class="table-cell table-shrink">
 				<code class="nowrap">
 					
 	public
-					
+					static
 					
 				</code>
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builders.BodyBuilder.html#15-21" title="Go to source code">__construct</a>(<span><a href="IPay.Builders.BodyBuilder.html#~ParametersType"><span title="array&lt;string, ValueType&gt;">ParametersType</span></a> <var>$parameters</var> = []</span>)</code>
+				<code><a href="source-Builders.RequestBodyBuilder.html#22-25" title="Go to source code">new</a>(): <b><span class="active" title="IPay\Builders\RequestBodyBuilder">self</span></b></code>
 
 
 
@@ -186,10 +186,10 @@
 	</div>
 			</td>
 		<td class="table-anchor">
-			<a href="#___construct">#</a>
+			<a href="#_new">#</a>
 		</td>
 	</tr>
-	<tr class="expandable collapsed" data-order="setSessionId" id="_setSessionId">
+	<tr class="expandable collapsed" data-order="enhance" id="_enhance">
 			<td class="table-cell table-shrink">
 				<code class="nowrap">
 					
@@ -200,7 +200,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builders.BodyBuilder.html#23-26" title="Go to source code">setSessionId</a>(<span>string <var>$value</var></span>): void</code>
+				<code><a href="source-Builders.RequestBodyBuilder.html#27-33" title="Go to source code">enhance</a>(<span><a href="IPay.Builders.RequestBodyBuilder.html#~ParametersType"><span title="array&lt;string, ValueType&gt;">ParametersType</span></a> <var>$parameters</var></span>): <b><span class="active" title="IPay\Builders\RequestBodyBuilder">self</span></b></code>
 
 
 
@@ -212,7 +212,7 @@
 	</div>
 			</td>
 		<td class="table-anchor">
-			<a href="#_setSessionId">#</a>
+			<a href="#_enhance">#</a>
 		</td>
 	</tr>
 	<tr class="expandable collapsed" data-order="build" id="_build">
@@ -226,7 +226,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builders.BodyBuilder.html#28-41" title="Go to source code">build</a>(<span><a href="IPay.Builders.BodyBuilder.html#~ParametersType"><span title="array&lt;string, ValueType&gt;">ParametersType</span></a> <var>$parameters</var> = []</span>): <b><span class="active" title="IPay\Builders\BodyBuilder">self</span></b></code>
+				<code><a href="source-Builders.RequestBodyBuilder.html#35-45" title="Go to source code">build</a>(<span><a href="IPay.Builders.RequestBodyBuilder.html#~ParametersType"><span title="array&lt;string, ValueType&gt;">ParametersType</span></a> <var>$parameters</var> = []</span>): <b><span class="active" title="IPay\Builders\RequestBodyBuilder">self</span></b></code>
 
 
 
@@ -252,7 +252,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builders.BodyBuilder.html#43-46" title="Go to source code">encrypt</a>(): string</code>
+				<code><a href="source-Builders.RequestBodyBuilder.html#47-50" title="Go to source code">encrypt</a>(): string</code>
 
 
 
@@ -278,7 +278,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builders.BodyBuilder.html#48-51" title="Go to source code">__toString</a>(): string</code>
+				<code><a href="source-Builders.RequestBodyBuilder.html#52-55" title="Go to source code">__toString</a>(): string</code>
 
 
 
@@ -309,7 +309,7 @@
 			</td>
 
 			<td class="table-cell">
-				<code><a href="source-Builders.BodyBuilder.html#53-57" title="Go to source code">jsonSerialize</a>()</code>
+				<code><a href="source-Builders.RequestBodyBuilder.html#57-61" title="Go to source code">jsonSerialize</a>()</code>
 
 
 
