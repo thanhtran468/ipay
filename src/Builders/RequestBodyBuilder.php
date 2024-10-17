@@ -4,25 +4,32 @@ namespace IPay\Builders;
 
 use IPay\Encryption\Encryptor;
 use Nette\Utils\Json;
-use Nette\Utils\Random;
 
 /**
  * @psalm-type ValueType = string|int
  * @psalm-type ParametersType = array<string, ValueType>
  */
-final class BodyBuilder implements \Stringable, \JsonSerializable
+final class RequestBodyBuilder implements \Stringable, \JsonSerializable
 {
     /**
      * @param ParametersType $parameters
      */
-    public function __construct(
+    private function __construct(
         private array $parameters = [],
     ) {
     }
 
-    public function setSessionId(string $value): void
+    public static function new(): self
     {
-        $this->parameters['sessionId'] = $value;
+        return new self();
+    }
+
+    /**
+     * @param ParametersType $parameters
+     */
+    public function enhance(array $parameters): self
+    {
+        return new self($parameters);
     }
 
     /**
@@ -30,10 +37,7 @@ final class BodyBuilder implements \Stringable, \JsonSerializable
      */
     public function build(array $parameters = []): self
     {
-        $data = array_merge([
-            'lang' => 'en',
-            'requestId' => Random::generate(12, '0-9A-Z').'|'.time(),
-        ], $this->parameters, $parameters);
+        $data = array_merge($this->parameters, $parameters);
         ksort($data);
         $data['signature'] = md5(http_build_query($data));
 

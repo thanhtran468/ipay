@@ -6,7 +6,7 @@ use IPay\Enums\TransactionType;
 use IPay\ValueObjects\Transaction;
 
 /**
- * @psalm-import-type ParametersType from BodyBuilder
+ * @psalm-import-type ParametersType from RequestBodyBuilder
  *
  * @implements \IteratorAggregate<int,Transaction>
  */

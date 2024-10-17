@@ -13,7 +13,7 @@ use Http\Client\Common\Plugin\ContentTypePlugin;
 use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
-use IPay\Builders\BodyBuilder;
+use IPay\Builders\RequestBodyBuilder;
 use IPay\Builders\TransactionBuilder;
 use IPay\Captcha\CaptchaSolver;
 use IPay\Contracts\AbstractApi;
@@ -26,20 +26,20 @@ use Nette\Utils\Random;
 use Symfony\Component\VarExporter\LazyGhostTrait;
 
 /**
- * @phpstan-import-type ParametersType from BodyBuilder
+ * @phpstan-import-type ParametersType from RequestBodyBuilder
  */
 final class IPayClient extends AbstractApi
 {
-    use LazyGhostTrait;
+    use LazyGhostTrait {
+        createLazyGhost as private;
+    }
 
     /**
      * @throws Exceptions\LoginException
      */
     public static function fromCredentials(string $username, string $password): AbstractApi
     {
-        return new self(
-            $username,
-            $password,
+        $client = (new self(
             new HttpMethodsClient(
                 new PluginClient(Psr18ClientDiscovery::find(), [
                     new BaseUriPlugin(
@@ -52,30 +52,37 @@ final class IPayClient extends AbstractApi
                 Psr17FactoryDiscovery::findRequestFactory(),
                 Psr17FactoryDiscovery::findStreamFactory(),
             ),
-        );
+        ))->login($username, $password);
+
+        return $client;
     }
 
+    /**
+     * @param ParametersType $authenticatedParameters
+     */
     private function __construct(
-        string $username,
-        string $password,
         private HttpMethodsClientInterface $client,
-        private BodyBuilder $bodyBuilder = new BodyBuilder(),
+        private array $authenticatedParameters = [],
         private ObjectMapper $objectMapper = new ObjectMapperUsingReflection(
             new DefinitionProvider(
                 keyFormatter: new KeyFormatterWithoutConversion(),
             ),
         ),
     ) {
+        if ($authenticatedParameters) {
+            self::createLazyGhost(
+                initializer: $this->populateLazyProperties(...),
+                instance: $this,
+            );
+        }
+    }
+
+    private function login(string $userName, string $accessCode): self
+    {
         /** @var array{sessionId: string, ...} */
-        $response = $this->post('signIn', [
-            'userName' => $username,
-            'accessCode' => $password,
-        ] + $this->bypassCaptcha());
-        $bodyBuilder->setSessionId($response['sessionId']);
-        self::createLazyGhost(
-            initializer: $this->populateLazyProperties(...),
-            instance: $this,
-        );
+        $response = $this->post('signIn', get_defined_vars() + $this->bypassCaptcha());
+
+        return new self($this->client, ['sessionId' => $response['sessionId']]);
     }
 
     private function populateLazyProperties(): void
@@ -143,10 +150,24 @@ final class IPayClient extends AbstractApi
         $response = $this->client->post(
             sprintf('ipay/wa/%s', $uri),
             [],
-            $this->bodyBuilder->build($parameters)->encrypt(),
+            RequestBodyBuilder::new()
+                ->enhance($this->getRequiredParameters())
+                ->build($parameters)
+                ->encrypt(),
         );
 
         return Json::decode((string) $response->getBody(), true);
+    }
+
+    /**
+     * @return ParametersType
+     */
+    private function getRequiredParameters(): array
+    {
+        return array_merge([
+            'lang' => 'en',
+            'requestId' => Random::generate(12, '0-9A-Z').'|'.time(),
+        ], $this->authenticatedParameters);
     }
 
     /**
