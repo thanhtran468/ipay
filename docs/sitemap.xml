@@ -5,7 +5,6 @@
 		<url><loc>tree.html</loc></url>
 
 			<url><loc>namespace-IPay.html</loc></url>
-			<url><loc>namespace-IPay.Builders.html</loc></url>
 			<url><loc>namespace-IPay.Captcha.html</loc></url>
 			<url><loc>namespace-IPay.Contracts.html</loc></url>
 			<url><loc>namespace-IPay.Encryption.html</loc></url>
@@ -13,10 +12,10 @@
 			<url><loc>namespace-IPay.Exceptions.html</loc></url>
 			<url><loc>namespace-IPay.Http.html</loc></url>
 			<url><loc>namespace-IPay.Http.Plugins.html</loc></url>
+			<url><loc>namespace-IPay.Resources.html</loc></url>
+			<url><loc>namespace-IPay.Utils.html</loc></url>
 			<url><loc>namespace-IPay.ValueObjects.html</loc></url>
 
-			<url><loc>IPay.Builders.RequestBodyBuilder.html</loc></url>
-			<url><loc>IPay.Builders.TransactionBuilder.html</loc></url>
 			<url><loc>IPay.Captcha.CaptchaSolver.html</loc></url>
 			<url><loc>IPay.Contracts.AbstractApi.html</loc></url>
 			<url><loc>IPay.Encryption.Encryptor.html</loc></url>
@@ -25,14 +24,14 @@
 			<url><loc>IPay.Exceptions.SessionException.html</loc></url>
 			<url><loc>IPay.Http.Plugins.ExceptionThrower.html</loc></url>
 			<url><loc>IPay.IPayClient.html</loc></url>
+			<url><loc>IPay.Resources.Transactions.html</loc></url>
+			<url><loc>IPay.Utils.RequestBodyBuilder.html</loc></url>
 			<url><loc>IPay.ValueObjects.Account.html</loc></url>
 			<url><loc>IPay.ValueObjects.AccountState.html</loc></url>
 			<url><loc>IPay.ValueObjects.Customer.html</loc></url>
 			<url><loc>IPay.ValueObjects.Transaction.html</loc></url>
 
 
-			<url><loc>source-Builders.RequestBodyBuilder.html</loc></url>
-			<url><loc>source-Builders.TransactionBuilder.html</loc></url>
 			<url><loc>source-Captcha.CaptchaSolver.html</loc></url>
 			<url><loc>source-Contracts.AbstractApi.html</loc></url>
 			<url><loc>source-Encryption.Encryptor.html</loc></url>
@@ -41,6 +40,8 @@
 			<url><loc>source-Exceptions.SessionException.html</loc></url>
 			<url><loc>source-Http.Plugins.ExceptionThrower.html</loc></url>
 			<url><loc>source-IPayClient.html</loc></url>
+			<url><loc>source-Resources.Transactions.html</loc></url>
+			<url><loc>source-Utils.RequestBodyBuilder.html</loc></url>
 			<url><loc>source-ValueObjects.Account.html</loc></url>
 			<url><loc>source-ValueObjects.AccountState.html</loc></url>
 			<url><loc>source-ValueObjects.Customer.html</loc></url>

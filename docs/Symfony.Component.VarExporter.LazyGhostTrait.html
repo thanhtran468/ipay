@@ -20,9 +20,6 @@
 				<a href="namespace-IPay.html">IPay</a>
 	<ul>
 			<li class="menuGroup-item">
-				<a href="namespace-IPay.Builders.html">Builders</a>
-			</li>
-			<li class="menuGroup-item">
 				<a href="namespace-IPay.Captcha.html">Captcha</a>
 			</li>
 			<li class="menuGroup-item">
@@ -39,6 +36,12 @@
 			</li>
 			<li class="menuGroup-item">
 				<a href="namespace-IPay.Http.html">Http</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Resources.html">Resources</a>
+			</li>
+			<li class="menuGroup-item">
+				<a href="namespace-IPay.Utils.html">Utils</a>
 			</li>
 			<li class="menuGroup-item">
 				<a href="namespace-IPay.ValueObjects.html">ValueObjects</a>
@@ -153,7 +156,7 @@
 
 			<td class="table-cell">
 				<code>createLazyGhost(
-	<span><a href="Closure.html"><span title="Closure">Closure</span></a> <var>$initializer</var></span>,
+	<span><a href="Closure.html"><span title="Closure">Closure</span></a>(static):&nbsp;void <var>$initializer</var></span>,
 	<span>array&lt;string, true&gt;|null <var>$skippedProperties</var> = <span class="php-kw">null</span></span>,
 	<span>static|null <var>$instance</var> = <span class="php-kw">null</span></span>,
 ): static</code>
@@ -171,6 +174,11 @@
 
 							<h4>Parameters</h4>
 							<table>
+									<tr>
+										<td><var>$initializer</var>&nbsp;&nbsp;</td>
+										<td><p>The closure should initialize the object it receives as argument</p>
+</td>
+									</tr>
 									<tr>
 										<td><var>$skippedProperties</var>&nbsp;&nbsp;</td>
 										<td><p>An array indexed by the properties to skip, a.k.a. the ones
@@ -209,6 +217,14 @@ that the initializer doesn't initialize, if any</p>
 	<div class="description"><p>Returns whether the object is initialized.</p>
 </div>
 
+							<h4>Parameters</h4>
+							<table>
+									<tr>
+										<td><var>$partial</var>&nbsp;&nbsp;</td>
+										<td><p>Whether partially initialized objects should be considered as initialized</p>
+</td>
+									</tr>
+							</table>
 
 
 
