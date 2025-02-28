@@ -2,10 +2,13 @@
 
 namespace IPay\Contracts;
 
-use IPay\Builders\TransactionBuilder;
+use IPay\Resources\Transactions;
 use IPay\ValueObjects\Account;
 use IPay\ValueObjects\Customer;
 
+/**
+ * @phpstan-type ParametersType = array<string, int|string>
+ */
 abstract class AbstractApi
 {
     public Customer $customer;
@@ -13,5 +16,5 @@ abstract class AbstractApi
     /** @var list<Account> */
     public array $accounts;
 
-    abstract public function transactions(?string $accountNumber = null): TransactionBuilder;
+    abstract public function transactions(?string $accountNumber = null): Transactions;
 }

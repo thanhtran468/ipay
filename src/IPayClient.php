@@ -13,11 +13,11 @@ use Http\Client\Common\Plugin\ContentTypePlugin;
 use Http\Client\Common\PluginClient;
 use Http\Discovery\Psr17FactoryDiscovery;
 use Http\Discovery\Psr18ClientDiscovery;
-use IPay\Builders\RequestBodyBuilder;
-use IPay\Builders\TransactionBuilder;
 use IPay\Captcha\CaptchaSolver;
 use IPay\Contracts\AbstractApi;
 use IPay\Http\Plugins\ExceptionThrower;
+use IPay\Resources\Transactions;
+use IPay\Utils\RequestBodyBuilder;
 use IPay\ValueObjects\Account;
 use IPay\ValueObjects\Customer;
 use IPay\ValueObjects\Transaction;
@@ -26,7 +26,7 @@ use Nette\Utils\Random;
 use Symfony\Component\VarExporter\LazyGhostTrait;
 
 /**
- * @phpstan-import-type ParametersType from RequestBodyBuilder
+ * @phpstan-import-type ParametersType from AbstractApi
  */
 final class IPayClient extends AbstractApi
 {
@@ -80,7 +80,11 @@ final class IPayClient extends AbstractApi
     private function login(string $userName, string $accessCode): self
     {
         /** @var array{sessionId: string, ...} */
-        $response = $this->post('signIn', get_defined_vars() + $this->bypassCaptcha());
+        $response = $this->post('signIn', [
+            'userName' => $userName,
+            'accessCode' => $accessCode,
+            ...$this->bypassCaptcha(),
+        ]);
 
         return new self($this->client, ['sessionId' => $response['sessionId']]);
     }
@@ -100,19 +104,17 @@ final class IPayClient extends AbstractApi
     /**
      * @suppress 1416
      */
-    public function transactions(?string $accountNumber = null): TransactionBuilder
+    public function transactions(?string $accountNumber = null): Transactions
     {
-        $that = $this;
-
-        return (\Closure::bind(function () use ($that, $accountNumber): TransactionBuilder {
-            $builder = new TransactionBuilder();
-            $builder->resolver = \Closure::bind(function (array $parameters): \Traversable {
+        return (\Closure::bind(function (IPayClient $api, ?string $accountNumber): Transactions {
+            $transactions = new Transactions();
+            $transactions->resolver = \Closure::bind(function (array $parameters): \Traversable {
                 return $this->getTransactions($parameters);
-            }, $that, $that::class);
-            $builder->parameters['accountNumber'] = $accountNumber ?? $that->customer->accountNumber;
+            }, $api, $api::class);
+            $transactions->parameters['accountNumber'] = $accountNumber ?? $api->customer->accountNumber;
 
-            return $builder;
-        }, null, TransactionBuilder::class))();
+            return $transactions;
+        }, null, Transactions::class))($this, $accountNumber);
     }
 
     /**

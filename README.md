@@ -8,7 +8,7 @@
 
 declare(strict_types=1);
 
-use IPay\Enum\TransactionType;
+use IPay\Enums\TransactionType;
 use IPay\IPayClient;
 
 require __DIR__.'/vendor/autoload.php';
@@ -16,10 +16,10 @@ require __DIR__.'/vendor/autoload.php';
 try {
     $session = IPayClient::fromCredentials('username', 'password');
 
+    # Lịch sử giao dịch hôm nay
     $transactions = $session->transactions()
         ->type(TransactionType::CREDIT)
-        ->today()
-        ->getIterator();
+        ->today();
 
     foreach ($transactions as $transaction) {
         echo $transaction->remark.PHP_EOL;

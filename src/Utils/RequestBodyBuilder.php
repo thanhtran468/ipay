@@ -1,13 +1,12 @@
 <?php
 
-namespace IPay\Builders;
+namespace IPay\Utils;
 
 use IPay\Encryption\Encryptor;
 use Nette\Utils\Json;
 
 /**
- * @psalm-type ValueType = string|int
- * @psalm-type ParametersType = array<string, ValueType>
+ * @phpstan-import-type ParametersType from \IPay\Contracts\AbstractApi
  */
 final class RequestBodyBuilder implements \Stringable, \JsonSerializable
 {

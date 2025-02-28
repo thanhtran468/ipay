@@ -1,16 +1,16 @@
 <?php
 
-namespace IPay\Builders;
+namespace IPay\Resources;
 
 use IPay\Enums\TransactionType;
 use IPay\ValueObjects\Transaction;
 
 /**
- * @psalm-import-type ParametersType from RequestBodyBuilder
+ * @psalm-import-type ParametersType from \IPay\Contracts\AbstractApi
  *
  * @implements \IteratorAggregate<int,Transaction>
  */
-final class TransactionBuilder implements \IteratorAggregate
+final class Transactions implements \IteratorAggregate
 {
     /** @var \Closure(ParametersType):\Traversable<Transaction> */
     private \Closure $resolver;
